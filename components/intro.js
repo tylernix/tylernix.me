@@ -12,6 +12,7 @@ export default function Intro() {
         <a
           href="https://auth0.com"
           className="underline hover:text-success duration-200 transition-colors"
+          target="_blank"
         >
           Auth0
         </a>{' '}
