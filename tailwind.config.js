@@ -8,6 +8,8 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+        linkedin: '#2867B2',
+        github: '#24292e'
       },
       spacing: {
         28: '7rem',
