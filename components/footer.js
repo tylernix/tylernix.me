@@ -18,6 +18,7 @@ export default function Footer() {
             </a>
             <a
               href={`${GITHUB_URL}`}
+              target="_blank"
               className="mx-3 font-bold hover:underline"
             >
               View on GitHub
