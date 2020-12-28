@@ -1,9 +1,7 @@
-import { CMS_NAME } from "../lib/constants";
 import Container from "../components/container";
-import { GITHUB_URL, LINKEDIN_URL } from "../lib/constants";
 import React, { useState, useEffect, useRef } from 'react'
 
-export default function WebAuthN() {
+export default function WebAuthn() {
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between border-b border-accent-2">
       <Container>
@@ -37,26 +35,6 @@ function DistortText(props) {
 
     useInterval(() => {
         distortText(() => {
-            // var words = curr.split(' ');
-            // var newText = '';
-            // words.forEach((word) => {
-            //     var chars = word.split('');
-            //     if (chars != '') {
-            //         //GET A RANDOM CHARACTER FROM THE TEXT
-            //         var rand = Math.floor(Math.random() * (chars.length));
-            //         //GET A RANDOM REPLACEMENT CHARACTER
-            //         var randRep = Math.floor(Math.random() * (charSet.length));
-            //         //CHECK TO MAKE SURE THAT THE NEW CHARACTER IS DIFFERENT FROM THE OLD
-            //         if(chars[rand] != charSet[randRep] && chars[rand] != ' '){
-            //             chars[rand] = charSet[randRep];
-            //         }
-            //         //UPDATE TEXT
-            //         newText += chars.join('') + ' ';
-            //     }
-            // })
-            // return newText;
-
-            
             //GET EACH INDIVIDUAL CHARACTER
             var chars = curr.split('');
             //GET A RANDOM CHARACTER FROM THE TEXT
@@ -84,8 +62,6 @@ function DistortText(props) {
 
     return <h1>{curr}</h1>
 }
-
-
 
 function useInterval(callback, delay) {
     const savedCallback = useRef();
