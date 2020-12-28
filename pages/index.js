@@ -2,6 +2,7 @@ import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
+import WebAuthN from '../components/webauthn'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import { getAllPosts } from '../lib/api'
@@ -19,6 +20,7 @@ export default function Index({ allPosts }) {
         </Head>
           <Header />
           <Intro />
+          <WebAuthN />
           <Container>
           <MoreStories posts={allPosts} />
         </Container>
