@@ -114,7 +114,7 @@ function authenticate(user, rawId, authState, setAuthState) {
     console.log(authState);
     var idList = [{
         id: rawId,
-        transports: ["usb", "nfc"],
+        transports: ["usb", "nfc", "internal"],
         type: "public-key"
     }];
 
