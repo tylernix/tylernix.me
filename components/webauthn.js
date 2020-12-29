@@ -12,7 +12,7 @@ export default function WebAuthn() {
         <div>Username: {user}</div>
         <a
             onClick={() => authenticate(user, rawId, authState, setAuthState)}
-            className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0"
+            className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
             >
             Authenticate
         </a>
@@ -22,7 +22,7 @@ export default function WebAuthn() {
           <div>Congratulations!</div>
           <a
                 onClick={() => setAuthState('unregistered')}
-                className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0"
+                className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
                 >
                 Reset
             </a>
@@ -37,7 +37,7 @@ export default function WebAuthn() {
               ></input>
               <a
                 onClick={() => registerCredential(user, setRawId, authState, setAuthState)}
-                className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0"
+                className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
               >
                 Register
               </a>
@@ -48,10 +48,10 @@ export default function WebAuthn() {
     <section className="flex-col md:flex-row flex items-center md:justify-between border-b border-accent-2">
       <Container>
             <div className="flex mx-auto flex-col lg:flex-row items-center text-left justify-center">
-                <div className="text-md md:text-lg lg:text-2xl text-center lg:text-left py-8 px-4 lg:p-8 lg:w-2/3">
+                <div className="text-md md:text-lg lg:text-2xl text-center lg:text-left my-8 mx-4 md:mb-4 lg:m-16 lg:w-2/3">
                     <DistortText authState={authState} text={"The Web Authentication API (also known as WebAuthn) is a specification written by the W3C and FIDO, with the participation of Google, Mozilla, Microsoft, Yubico, and others. The API allows servers to register and authenticate users using public key cryptography instead of a password. WebAuthn is part of the FIDO2 framework, which is a set of technologies that enable passwordless authentication between servers, browsers, and authenticators. As of January 2019, WebAuthn is supported on Chrome, Firefox, and Edge, and Safari."} />
                 </div>
-                <div className="flex flex-col p-4 md:m-8 lg:w-1/3 border bg-black text-white">
+                <div className="flex flex-col p-4 md:p-8 lg-p-4 md:m-8 lg:w-1/3 border bg-black text-white">
                     <h1 className="text-xl lg:text-2xl pb-2">This text is jumbled on purpose.</h1>
                     <p className="pb-2">I want to demonstrate a new auth protocal called <a className="text-blue-300" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>.</p>
                     <p className="pb-2">To unlock the text, connect a <a className="text-blue-300" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-blue-300" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
