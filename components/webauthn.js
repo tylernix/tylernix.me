@@ -48,7 +48,7 @@ export default function WebAuthn() {
     <section className="flex-col md:flex-row flex items-center md:justify-between border-b border-accent-2">
       <Container>
             <div className="flex mx-auto flex-col lg:flex-row items-center text-left justify-center">
-                <div className="text-md lg:text-2xl text-center lg:text-left py-4 lg:w-2/3">
+                <div className="text-md md:text-lg lg:text-2xl text-center lg:text-left py-8 px-4 lg:p-8 lg:w-2/3">
                     <DistortText authState={authState} text={"The Web Authentication API (also known as WebAuthn) is a specification written by the W3C and FIDO, with the participation of Google, Mozilla, Microsoft, Yubico, and others. The API allows servers to register and authenticate users using public key cryptography instead of a password. WebAuthn is part of the FIDO2 framework, which is a set of technologies that enable passwordless authentication between servers, browsers, and authenticators. As of January 2019, WebAuthn is supported on Chrome, Firefox, and Edge, and Safari."} />
                 </div>
                 <div className="flex flex-col p-4 md:m-8 lg:w-1/3 border bg-black text-white">
