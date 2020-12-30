@@ -5,7 +5,7 @@ import { GITHUB_URL, LINKEDIN_URL } from "../lib/constants";
 export default function Header() {
   return (
     <Container>
-      <div class="flex justify-between text-sm text-gray-700 flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+      <div class="flex justify-between text-sm text-prussian-blue flex-col md:flex-row flex items-center md:justify-between my-4 md:my-12">
         <div class="flex items-center">
           <a href="/">
             <img src="assets/tnix-logo.png"></img>

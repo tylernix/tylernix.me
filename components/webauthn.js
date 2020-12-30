@@ -65,6 +65,7 @@ export default function WebAuthn() {
                             Register
                         </a>
                     </form>
+                    <div className="text-xs pt-4"><b>Note:</b> If this demo isn't working, it is probably because you are using a browser that doesn't support WebAuthn yet, or you are using device that does not yet support biometric signin. Give it another try on another browser or device.</div>
                 </div> 
     }
 
