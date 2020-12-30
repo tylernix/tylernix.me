@@ -12,7 +12,7 @@ export default function Header() {
           </a>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center pt-8 space-y-4 md:space-y-0">
+        <div class="flex flex-col md:flex-row items-center pt-6 space-y-4 md:space-y-0">
           <a href="/" class="mx-3 text-base hover:underline">
             More coming soon
           </a>
