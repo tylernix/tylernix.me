@@ -7,20 +7,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "bootstrap": "^4.5.3",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",
     "next": "latest",
+    "postcss": "^8.2.2",
     "react": "^16.13.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.0",
     "remark": "11.0.2",
-    "remark-html": "10.0.0"
+    "remark-html": "10.0.0",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.0"
+    "postcss-preset-env": "^6.7.0"
   },
   "license": "MIT"
 }

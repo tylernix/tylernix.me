@@ -5,65 +5,92 @@ export default function WebAuthn() {
     let [authState, setAuthState] = useState('unregistered'); // unregistered, registered, authenticated, failed
     let [user, setUser] = useState();
     let [rawId, setRawId] = useState();
+    let [error, setError] = useState();
 
-    let form;
+    let demo;
     if (authState == 'registered') {
-        form = <form className="flex flex-col">
-        <div>Username: {user}</div>
-        <a
-            onClick={() => authenticate(user, rawId, authState, setAuthState)}
-            className="bg-imperial-red hover:bg-white hover:text-black border border-imperial-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
-            >
-            Authenticate
-        </a>
-    </form>
+        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
+                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Authenticate with your new credential</h1>
+                    <p className="pb-2">You have created a new credential for this site. The <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId" target="_blank">rawId</a> and the <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential" target="_blank">public key</a> are all that are needed to identify you. No more passwords! No more personal identifying data!</p>
+                    <p className="pb-6">Using the rawId, you can authenticate as the user you just created.</p> 
+                    <form className="flex flex-col relative">
+                            <div>Your username: <span className="border-b-2 border-imperial-red">{user}</span></div>
+                            <div className="whitespace-nowrap truncate">Your rawId: <span className="border-b-2 border-imperial-red">{binToStr(rawId)}</span></div>
+                            <div className="relative -bottom-1 left-20 text-xs">^ Trust me, it's long.</div>
+                        <a
+                            onClick={() => authenticate(user, rawId, authState, setAuthState, setError)}
+                            className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                            >
+                            Authenticate
+                        </a>
+                    </form>
+                </div>  
+        
+        
     } else if (authState == 'authenticated') {
-        form =  <div className="flex flex-col">
-          <div>Congratulations!</div>
-          <a
-                onClick={() => setAuthState('unregistered')}
-                className="bg-imperial-red hover:bg-white hover:text-black border border-imperial-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
-                >
-                Reset
-            </a>
-      </div>
+        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
+                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Login successful</h1>
+                    <p className="pb-2">You can now read the super mysterious text.</p>
+                    <p className="pb-6">Using the rawId, you can authenticate as the user you just created.</p> 
+                    <div className=""><span className="border-b-2 border-imperial-red">You did it!</span> </div>
+                    <a
+                        onClick={() => setAuthState('unregistered')}
+                        className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                        >
+                        Reset
+                    </a>
+                </div>   
+        
+
     } else {
-         form = <form className="flex flex-col">
-              <input
-                className="p-2 text-black"
-                placeholder="Username or email"
-                onChange={e => setUser(e.target.value)}
-                value={user}
-              ></input>
-              <a
-                onClick={() => registerCredential(user, setRawId, authState, setAuthState)}
-                className="bg-imperial-red hover:bg-white hover:text-black border border-imperial-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
-              >
-                Register
-              </a>
-            </form>
+         demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
+                    <h1 className="text-xl lg:text-3xl pb-4 lg:pb-6">This text is jumbled on purpose.</h1>
+                    <p className="pb-2">In order to demonstrate a new authentication protocal called <a className="text-light-steel-blue" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>, I created a simple demo.</p>
+                    <p className="pb-6">To unlock the text, connect a <a className="text-light-steel-blue" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-light-steel-blue" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
+                    <form className="flex flex-col relative">
+                        <svg className="h-6 w-6 top-2 left-2 text-imperial-red absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                        </svg>
+                        <input
+                            className="p-2 pl-10 text-gray-400"
+                            placeholder="Username or email"
+                            onChange={e => setUser(e.target.value)}
+                            value={user}
+                        ></input>
+                        <label className="pt-2 text-imperial-red">{error}</label>
+                        <a
+                            onClick={() => registerCredential(user, setRawId, setAuthState, setError)}
+                            className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                        >
+                            Register
+                        </a>
+                    </form>
+                </div> 
     }
 
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between border-b border-accent-2">
       <Container>
-            <div className="flex flex-col lg:flex-row items-center text-left justify-center m-4 md:m-8 lg:my-16 lg:mx-0">
-                <div className="text-md md:text-lg lg:text-2xl text-center lg:text-left py-8 md:px-16 lg:w-2/3">
-                    <DistortText authState={authState} text={"The Web Authentication API (also known as WebAuthn) is a specification written by the W3C and FIDO, with the participation of Google, Mozilla, Microsoft, Yubico, and others. The API allows servers to register and authenticate users using public key cryptography instead of a password. WebAuthn is part of the FIDO2 framework, which is a set of technologies that enable passwordless authentication between servers, browsers, and authenticators. As of January 2019, WebAuthn is supported on Chrome, Firefox, and Edge, and Safari."} />
+            <div className="flex flex-col lg:flex-row items-center text-left justify-between m-4 md:m-8 lg:my-16 lg:mx-0">
+                <div className="text-prussian-blue text-sm md:text-lg lg:text-2xl text-center lg:text-left py-4 lg:pr-24 lg:w-2/3">
+                    <DistortText authState={authState} text={'The Web Authentication API (also known as WebAuthn) is a W3C recommendation for defining an API enabling the creation and use of strong, attested, scoped, public key-based credentials \
+                                                            by web applications, for the purpose of strongly authenticating users. In normal words, WebAuthn allows websites to register and authenticate users using state-of-the-art cryptography \
+                                                            instead of you having to type in a password! Pretty nifty. Unfortunately, as of January 2021, WebAuthn is still sparesely used across the internet, even though it is supported by all \
+                                                            major browsers such as Chrome, Firefox, Edge, and Safari. Interested in learning more? Go to https://tylernix.me/webauthn. '} />
                 </div>
-                <div className="flex flex-col p-4 md:p-8 lg:p-4 lg:w-1/3 border bg-black text-white"> 
-                    <h1 className="text-xl lg:text-2xl pb-2">This text is jumbled on purpose.</h1>
-                    <p className="pb-2">I want to demonstrate a new auth protocal called <a className="text-blue-300" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>.</p>
-                    <p className="pb-2">To unlock the text, connect a <a className="text-blue-300" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-blue-300" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
-                    {form}
-                </div>
+                {demo}
           </div>
       </Container>
     </section>
   );
 }
 
-function registerCredential(user, setRawId, authState, setAuthState) {
+function registerCredential(user, setRawId, setAuthState, setError) {
+    if (!user) {
+        return setError("You must enter a username.")
+    } else {
+        setError('');
+    }
 
     // Registration args object
     var createCredentialDefaultArgs = {
@@ -109,9 +136,6 @@ function registerCredential(user, setRawId, authState, setAuthState) {
 }
 
 function authenticate(user, rawId, authState, setAuthState) {
-    console.log(user);
-    console.log(rawId);
-    console.log(authState);
     var idList = [{
         id: rawId,
         transports: ["usb", "nfc", "internal"],
