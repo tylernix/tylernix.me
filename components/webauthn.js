@@ -9,13 +9,13 @@ export default function WebAuthn() {
 
     let demo;
     if (authState == 'registered') {
-        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
+        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white max-w-xs md:max-w-2xl"> 
                     <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Authenticate with your new credential</h1>
                     <p className="pb-2">You have created a new credential for this site. The <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId" target="_blank">rawId</a> and the <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential" target="_blank">public key</a> are all that are needed to identify you. No more passwords! No more personal identifying data!</p>
                     <p className="pb-6">Using the rawId, you can authenticate as the user you just created.</p> 
                     <form className="flex flex-col relative">
                             <div>Your username: <span className="border-b-2 border-imperial-red">{user}</span></div>
-                            <div className="whitespace-nowrap truncate">Your rawId: <span className="border-b-2 border-imperial-red">{binToStr(rawId)}</span></div>
+                            <div className="truncate">Your rawId: <span className="border-b-2 border-imperial-red">{binToStr(rawId)}</span></div>
                             <div className="relative -bottom-1 left-20 text-xs">^ Trust me, it's long.</div>
                         <a
                             onClick={() => authenticate(user, rawId, authState, setAuthState, setError)}
@@ -29,16 +29,15 @@ export default function WebAuthn() {
         
     } else if (authState == 'authenticated') {
         demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
-                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Login successful</h1>
-                    <p className="pb-2">You can now read the super mysterious text.</p>
-                    <p className="pb-6">Using the rawId, you can authenticate as the user you just created.</p> 
-                    <div className=""><span className="border-b-2 border-imperial-red">You did it!</span> </div>
+                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Login successful!</h1>
+                    <p className="pb-2">You can now read the super mysterious text - you earned it of course.</p>
                     <a
                         onClick={() => setAuthState('unregistered')}
                         className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
                         >
                         Reset
                     </a>
+                    <p className="pt-8">P.S. - I am just glad this worked. ;-)</p> 
                 </div>   
         
 
@@ -65,14 +64,14 @@ export default function WebAuthn() {
                             Register
                         </a>
                     </form>
-                    <div className="text-xs pt-4"><b>Note:</b> If this demo isn't working, it is probably because you are using a browser that doesn't support WebAuthn yet, or you are using device that does not yet support biometric signin. Give it another try on another browser or device.</div>
+                    <div className="text-xs pt-4"><b>Note:</b> If this demo isn't working, it is probably because you are using a browser that doesn't support WebAuthn yet, or you are using device that does not yet support biometric signin. Try again on another browser or device.</div>
                 </div> 
     }
 
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between border-b border-accent-2">
       <Container>
-            <div className="flex flex-col lg:flex-row items-center text-left justify-between m-4 md:m-8 lg:my-16 lg:mx-0">
+            <div className="flex flex-col lg:flex-row items-center text-left justify-between my-4 md:m-8 lg:my-16 lg:mx-0">
                 <div className="text-prussian-blue text-sm md:text-lg lg:text-2xl text-center lg:text-left py-4 lg:pr-24 lg:w-2/3">
                     <DistortText authState={authState} text={'The Web Authentication API (also known as WebAuthn) is a W3C recommendation for defining an API enabling the creation and use of strong, attested, scoped, public key-based credentials \
                                                             by web applications, for the purpose of strongly authenticating users. In normal words, WebAuthn allows websites to register and authenticate users using state-of-the-art cryptography \
