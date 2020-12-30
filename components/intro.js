@@ -4,7 +4,7 @@ import { GITHUB_URL, LINKEDIN_URL } from "../lib/constants";
 
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between bg-accent-1 border-b border-accent-2">
+    <section className="flex-col md:flex-row flex items-center md:justify-between bg-light-steel-blue-light bg-opacity-90 border-b border-accent-2">
       {/* <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Blog.
       </h1> */}
@@ -12,21 +12,24 @@ export default function Intro() {
         <img src="assets/tnix.png"></img>
       </a> */}
       <Container>
-        <div class="flex mx-auto justify-between md:flex-row flex items-center text-center md:text-left md:justify-between">
-          <div class="hidden md:flex">
-            <img src="assets/profile.png" />
+        <div className="flex md:flex-row py-4 md:p-0 items-start md:items-end lg:items-center text-left ">
+          <div className="hidden md:flex">
+            <img className="w-full items-end" src="assets/profile.png" />
           </div>
-          <div class="flex flex-col space-y-8">
-            <h1 class="hidden md:flex text-6xl md:text-7xl tracking-tighter leading-tight">Hi, I'm Tyler.</h1>
-            <h4 className="text-xl max-w-3xl mb-4">
+          <div className="md:hidden min-w-max mt-2">
+            <img className="border border-cool-steel-blue rounded-full w-20" src="assets/profile-circle.png" />
+          </div>
+          <div className="flex flex-col pl-6 md:pl-14 lg:pl-28 space-y-4 lg:space-y-8 p-4">
+            <h1 className="md:flex text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-tight text-prussian-blue">Hi, I'm Tyler <span className="text-6xl lg:text-7xl text-imperial-red" >.</span></h1>
+            <h4 className="text-sm md:text-xl text-prussian-blue md:max-w-3xl mb-4">
               I am a Senior Solutions Engineer at{" "}
-              <a
+              <span className="border-b-2 border-imperial-red"><a
                 href="https://auth0.com"
-                className="underline hover:text-success duration-200 transition-colors"
+                className=" hover:text-success duration-200 transition-colors"
                 target="_blank"
               >
                 Auth0
-              </a>{" "}
+              </a></span>{" "}
               with experience in Web Development and Cloud Computing who
               specializes in Identity and Application Security.
             </h4>
@@ -34,14 +37,14 @@ export default function Intro() {
               <a
                 href={`${LINKEDIN_URL}`}
                 target="_blank"
-                className="bg-linkedin hover:bg-white hover:text-black border border-linkedin text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0 md:self-start"
+                className="bg-linkedin hover:bg-white hover:text-black border border-linkedin text-white text-xs md:text-base font-bold py-3 px-6 lg:px-8 duration-200 transition-colors mb-4 lg:mb-0 self-start"
               >
                 View LinkedIn
               </a>
               <a
                 href={`${GITHUB_URL}`}
                 target="_blank"
-                className="md:mx-3 bg-github hover:bg-white hover:text-black border border-github text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0 md:self-start"
+                className="bg-github hover:bg-white hover:text-black border border-github text-white text-xs md:text-base font-bold py-3 px-6 md:px-6 lg:px-8 duration-200 transition-colors md:mx-3 mb-4 lg:mb-0 self-start"
               >
                 View GitHub
               </a>
