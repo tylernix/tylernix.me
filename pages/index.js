@@ -16,7 +16,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>Tyler Nix's website</title>
+          <title>Tyler Nix</title>
         </Head>
           <Header />
           <Intro />

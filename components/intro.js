@@ -4,7 +4,7 @@ import { GITHUB_URL, LINKEDIN_URL } from "../lib/constants";
 
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between bg-accent-1 border-b border-accent-2">
+    <section className="flex-col md:flex-row flex items-center md:justify-between bg-light-steel-blue-light bg-opacity-90 border-b border-accent-2">
       {/* <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Blog.
       </h1> */}
@@ -17,16 +17,16 @@ export default function Intro() {
             <img src="assets/profile.png" />
           </div>
           <div class="flex flex-col space-y-8">
-            <h1 class="hidden md:flex text-6xl md:text-7xl tracking-tighter leading-tight">Hi, I'm Tyler.</h1>
+            <h1 class="hidden md:flex text-6xl md:text-7xl tracking-tighter leading-tight">Hi, I'm Tyler <span className="text-7xl text-imperial-red" >.</span></h1>
             <h4 className="text-xl max-w-3xl mb-4">
               I am a Senior Solutions Engineer at{" "}
-              <a
+              <span className="border-b-2 border-imperial-red"><a
                 href="https://auth0.com"
-                className="underline hover:text-success duration-200 transition-colors"
+                className=" hover:text-success duration-200 transition-colors"
                 target="_blank"
               >
                 Auth0
-              </a>{" "}
+              </a></span>{" "}
               with experience in Web Development and Cloud Computing who
               specializes in Identity and Application Security.
             </h4>

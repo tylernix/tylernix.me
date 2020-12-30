@@ -12,7 +12,7 @@ export default function WebAuthn() {
         <div>Username: {user}</div>
         <a
             onClick={() => authenticate(user, rawId, authState, setAuthState)}
-            className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+            className="bg-imperial-red hover:bg-white hover:text-black border border-imperial-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
             >
             Authenticate
         </a>
@@ -22,7 +22,7 @@ export default function WebAuthn() {
           <div>Congratulations!</div>
           <a
                 onClick={() => setAuthState('unregistered')}
-                className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                className="bg-imperial-red hover:bg-white hover:text-black border border-imperial-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
                 >
                 Reset
             </a>
@@ -37,7 +37,7 @@ export default function WebAuthn() {
               ></input>
               <a
                 onClick={() => registerCredential(user, setRawId, authState, setAuthState)}
-                className="bg-red-600 hover:bg-white hover:text-black border border-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                className="bg-imperial-red hover:bg-white hover:text-black border border-imperial-red text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
               >
                 Register
               </a>
