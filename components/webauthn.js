@@ -9,7 +9,7 @@ export default function WebAuthn() {
 
     let demo;
     if (authState == 'registered') {
-        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white max-w-xs md:max-w-2xl"> 
+        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white max-w-xs md:max-w-2xl"> 
                     <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Authenticate with your new credential</h1>
                     <p className="pb-2">You have created a new credential for this site. The <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId" target="_blank">rawId</a> and the <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential" target="_blank">public key</a> are all that are needed to identify you. No more passwords! No more personal identifying data!</p>
                     <p className="pb-6">Using the rawId, you can authenticate as the user you just created.</p> 
@@ -28,7 +28,7 @@ export default function WebAuthn() {
         
         
     } else if (authState == 'authenticated') {
-        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
+        demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white"> 
                     <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Login successful!</h1>
                     <p className="pb-2">You can now read the super mysterious text - you earned it of course.</p>
                     <a
@@ -42,7 +42,7 @@ export default function WebAuthn() {
         
 
     } else {
-         demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-black text-white"> 
+         demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white"> 
                     <h1 className="text-xl lg:text-3xl pb-4 lg:pb-6">This text is jumbled on purpose.</h1>
                     <p className="pb-2">In order to demonstrate a new authentication protocal called <a className="text-light-steel-blue" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>, I created a simple demo.</p>
                     <p className="pb-6">To unlock the text, connect a <a className="text-light-steel-blue" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-light-steel-blue" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
@@ -72,7 +72,7 @@ export default function WebAuthn() {
     <section className="flex-col md:flex-row flex items-center md:justify-between border-b border-accent-2">
       <Container>
             <div className="flex flex-col lg:flex-row items-center text-left justify-between my-4 md:m-8 lg:my-16 lg:mx-0">
-                <div className="text-prussian-blue text-sm md:text-lg lg:text-2xl text-center lg:text-left py-4 lg:pr-24 lg:w-2/3">
+                <div className="text-prussian-blue text-sm md:text-lg lg:text-2xl text-center lg:text-left py-4 lg:pr-12 xl:pr-24 lg:w-2/3">
                     <DistortText authState={authState} text={'The Web Authentication API (also known as WebAuthn) is a W3C recommendation for defining an API enabling the creation and use of strong, attested, scoped, public key-based credentials \
                                                             by web applications, for the purpose of strongly authenticating users. In normal words, WebAuthn allows websites to register and authenticate users using state-of-the-art cryptography \
                                                             instead of you having to type in a password! Pretty nifty. Unfortunately, as of January 2021, WebAuthn is still sparesely used across the internet, even though it is supported by all \
