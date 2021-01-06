@@ -25,7 +25,7 @@ export default function Intro() {
               I am a Senior Solutions Engineer at{" "}
               <span className="border-b-2 border-imperial-red"><a
                 href="https://auth0.com"
-                className=" hover:text-success duration-200 transition-colors"
+                className=" hover:text-imperial-red duration-200 transition-colors"
                 target="_blank"
               >
                 Auth0

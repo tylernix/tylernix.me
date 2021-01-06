@@ -6,16 +6,35 @@ module.exports = {
         'imperial-red': '#E63946',
         'light-steel-blue': {
           light: '#F7F8FD',
+          highlight: '#dfe6f6',
           DEFAULT: '#B0C1E8',
         },
         'prussian-blue': '#1D3557',
-        'mild-grey': '#FAFAFA',
+        'mild-gray': '#FAFAFA',
         background: '#F7F8FD',
         success: '#0070f3',
         cyan: '#79FFE1',
         linkedin: '#2867B2',
         github: '#24292e'
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              textDecoration: 'none',
+              fontWeight: '400',
+              color: theme('colors.prussian-blue'),
+              borderBottomWidth: '2px',
+              borderColor: theme('colors.imperial-red')
+            },
+            mark: {
+              backgroundColor: theme('colors.light-steel-blue.highlight'),
+              color: theme('colors.prussian-blue'),
+              padding: '3px'
+            }
+          }
+        }
+      }),
       spacing: {
         28: '7rem',
       },
@@ -37,4 +56,7 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
