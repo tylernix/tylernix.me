@@ -13,7 +13,7 @@ export default function Header() {
         </div>
 
         <div class="hidden md:flex md:flex-row items-center pt-6 space-y-4 md:space-y-0">
-          <a href="/home" class="mx-3 text-base hover:underline">
+          <a href="/" class="mx-3 text-base hover:underline">
             Home
           </a>
           <a href="/blog" class="mx-3 text-base hover:underline">
