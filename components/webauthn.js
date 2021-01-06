@@ -10,16 +10,16 @@ export default function WebAuthn() {
     let demo;
     if (authState == 'registered') {
         demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white max-w-xs md:max-w-2xl"> 
-                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Authenticate with your new credential</h1>
-                    <p className="pb-2">You have created a new credential for this site. The <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId" target="_blank">rawId</a> and the <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential" target="_blank">public key</a> are all that are needed to identify you. No more passwords! No more personal identifying data!</p>
-                    <p className="pb-6">Using the rawId, you can authenticate as the user you just created.</p> 
+                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6 text-white">Authenticate with your new credential</h1>
+                    <p className="pb-2 text-white">You have created a new credential for this site. The <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId" target="_blank">rawId</a> and the <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential" target="_blank">public key</a> are all that are needed to identify you. No more passwords! No more personal identifying data!</p>
+                    <p className="pb-6 text-white">Using the rawId, you can authenticate as the user you just created.</p> 
                     <form className="flex flex-col relative">
                             <div>Your username: <span className="border-b-2 border-imperial-red">{user}</span></div>
                             <div className="truncate">Your rawId: <span className="border-b-2 border-imperial-red">{binToStr(rawId)}</span></div>
                             <div className="relative -bottom-1 left-20 text-xs">^ Trust me, it's long.</div>
                         <a
                             onClick={() => authenticate(user, rawId, authState, setAuthState, setError)}
-                            className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                            className="bg-white text-prussian-blue hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
                             >
                             Authenticate
                         </a>
@@ -29,23 +29,23 @@ export default function WebAuthn() {
         
     } else if (authState == 'authenticated') {
         demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white"> 
-                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6">Login successful!</h1>
-                    <p className="pb-2">You can now read the super mysterious text - you earned it of course.</p>
+                    <h1 className="text-2xl lg:text-3xl pb-4 lg:pb-6 text-white">Login successful!</h1>
+                    <p className="pb-2 text-white">You can now read the super mysterious text - you earned it of course.</p>
                     <a
                         onClick={() => setAuthState('unregistered')}
-                        className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                        className="bg-white text-prussian-blue hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
                         >
                         Reset
                     </a>
-                    <p className="pt-8">P.S. - I am just glad this worked. ;-)</p> 
+                    <p className="pt-8 text-white">P.S. - I am just glad this worked ;-)</p> 
                 </div>   
         
 
     } else {
          demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white"> 
-                    <h1 className="text-xl lg:text-3xl pb-4 lg:pb-6">This text is jumbled on purpose.</h1>
-                    <p className="pb-2">In order to demonstrate a new authentication protocal called <a className="text-light-steel-blue" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>, I created a simple demo.</p>
-                    <p className="pb-6">To unlock the text, connect a <a className="text-light-steel-blue" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-light-steel-blue" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
+                    <h1 className="text-xl lg:text-3xl pb-4 lg:pb-6 text-white">This text is jumbled on purpose.</h1>
+                    <p className="pb-2 text-white">In order to demonstrate a new authentication protocal called <a className="text-light-steel-blue" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>, I created a simple demo.</p>
+                    <p className="pb-6 text-white">To unlock the text, connect a <a className="text-light-steel-blue" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-light-steel-blue" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
                     <form className="flex flex-col relative">
                         <svg className="h-6 w-6 top-2 left-2 text-imperial-red absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
@@ -59,12 +59,12 @@ export default function WebAuthn() {
                         <label className="pt-2 text-imperial-red">{error}</label>
                         <a
                             onClick={() => registerCredential(user, setRawId, setAuthState, setError)}
-                            className="bg-white text-black hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
+                            className="bg-white text-prussian-blue hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
                         >
                             Register
                         </a>
                     </form>
-                    <div className="text-xs pt-4"><b>Note:</b> If this demo isn't working, it is probably because you are using a browser that doesn't support WebAuthn yet, or you are using device that does not yet support biometric signin. Try again on another browser or device.</div>
+                    <div className="text-xs pt-4 text-white"><b>Note:</b> If this demo isn't working, it is probably because you are using a browser that doesn't support WebAuthn yet, or you are using device that does not yet support biometric signin. Try again on another browser or device.</div>
                 </div> 
     }
 

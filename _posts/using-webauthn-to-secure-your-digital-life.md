@@ -10,22 +10,24 @@ ogImage:
   url: '/assets/blog/using-webauthn-to-secure-your-digital-life/webauthn-cover.png'
 ---
 
-# Using WebAuthn to secure your digital life
 Since ancient times, we have used passwords to grant access to privileged information. Guards allow access to buildings if correctly presented with a password. Soldiers exchange passwords and counterpasswords to correctly identity each other. Even 8-year old secret societies allow entry to magical tree forts after declaring the super-duper secret passphrase. And when computers were first invented, how did we decide how to secure them? Passwords! Because, well, that’s all we had.
 
-But if there is anything that we have learned since Robert Morris first started storing login passwords in a hashed form in the 1970s, it is that passwords are messy. They are [hard to remember]( ), [easily guessed](l), and [annoying if leaked]( ). 
+But if there is anything that we have learned since Robert Morris first started storing login passwords in a hashed form in the 1970s, it is that passwords are messy. They are [hard to remember]( https://www.digitalinformationworld.com/2019/12/new-password-study-finds-78-of-people-had-to-reset-a-password-they-forgot-in-past-90-days.html), [easily guessed](https://nordpass.com/most-common-passwords-list/), and [annoying if leaked]( https://www.pcmag.com/how-to/what-to-do-when-youve-been-hacked). 
 
 ## We are getting better
 However, in recent years, we have become more clever in securing digital accounts past just passwords. The two most significant things you can do to make yourself more secure online:
-1. Use a [Password managers]( https://www.nytimes.com/wirecutter/blog/why-you-need-a-password-manager-yes-you/)  to create and store unique passwords for each of your accounts.
+
+1. Use a [Password manager]( https://www.nytimes.com/wirecutter/blog/why-you-need-a-password-manager-yes-you/) to create and store unique passwords for each of your accounts.
 2. Turn on [Multi-factor Authentication](https://auth0.com/blog/multifactor-authentication-mfa/) for all your highly sensitive accounts (like your bank and email).
 
-But passwords, those things you and I have to remember if we ever want to use anything on the internet a second time, are still at the heart of the login process. Your password is the single key that proves you are in fact you. If a hacker manages to steal it, they can fully impersonate you unless you are one of the  [28% of users using two-factor authentication.](https://duo.com/blog/state-of-the-auth-experiences-and-perceptions-of-multi-factor-authentication) Passwords are messy.
+But passwords, those things you and I have to remember if we ever want to use anything on the internet a second time, are still at the heart of the login process. Your password is the single key that proves you are in fact you. If a hacker manages to steal it, they can fully impersonate you unless you are one of the  [28% of users using two-factor authentication.](https://duo.com/blog/state-of-the-auth-experiences-and-perceptions-of-multi-factor-authentication) 
+
+Passwords are messy.
 
 ## How can WebAuthn help
-As of January 2021, all major browsers like Chrome, Edge, Firefox, and Safari now support the [Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API) meaning ::we now have the ability to use Public Key Cryptography to register and authenticate users instead of passwords!:: You might be saying to yourself, “Public Key - what??” Don’t worry. You don’t need to understand the underlying technology to use WebAuthn. If that is you, you can skip to the next section. Otherwise, let’s dive into the details.
+As of January 2021, all major browsers like Chrome, Edge, Firefox, and Safari now support the [Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API) meaning <mark>we now have the ability to use Public Key Cryptography to register and authenticate users instead of passwords!</mark> You might be saying to yourself, “Public Key - what??” Don’t worry. You don’t need to understand the underlying technology to use WebAuthn. If that is you, you can skip to the next section. Otherwise, let’s dive into the details.
 
-Public key cryptography is a relatively old concept, but relatively new to user passwords. Ironically, it was invented in the 1970s around the same time our friend Robert Morris was starting to store hashed login passwords. Public key cryptography uses the concept of a key pair; a private key that is stored securely with the user, and a public key that can be shared with the server. These “keys” are long, random numbers that have a mathematical relationship with each other.  This technique essentially became the cornerstone that [secures most of the modern internet](https://robertheaton.com/2014/03/27/how-does-https-actually-work/).  However, its brilliance of shared secrets was never really applied to managing user passwords…until now!
+Public key cryptography is a relatively old concept, but relatively new to user passwords. Ironically, it was invented in the 1970s around the same time our friend Robert Morris was starting to store hashed login passwords. Public key cryptography uses the concept of a key pair; a private key that is stored securely with the user, and a public key that can be shared with the server. These “keys” are long, random numbers that have a mathematical relationship with each other.  This technique essentially became the cornerstone that [secures most of the modern internet](https://robertheaton.com/2014/03/27/how-does-https-actually-work/). However, its brilliance of shared secrets was never really applied to managing user passwords…until now!
 
 The Web Authentication API (also known as WebAuthn) is a [specification](https://www.w3.org/TR/webauthn/)  written by the World Wide Web Consortium (W3C) and The Fast IDentity Online Alliance, known as FIDO, with the participation of Google, Mozilla, Microsoft, Yubico, and others. WebAuthn allows users to authenticate with public key cryptography using one of two options:
 * **Roaming authenticators** — These are removable and cross-platform devices, like a [Yubikey](https://www.nytimes.com/wirecutter/reviews/best-security-keys/) that can be used on multiple devices. To authenticate with a roaming authenticator, you simply connect it to the device (through USB, NFC, or Bluetooth), provide proof of presence (e.g., touching it), and optionally an additional authentication factor like a PIN or fingerprint recognition.
@@ -37,25 +39,25 @@ In the context of this article, we are focusing on Roaming Authenticators, but j
 What you will need:
 * A laptop or desktop
 * A modern browser installed, either Chrome, Firefox, Edge, or Safari.
-* A hardware security key, the two best options are [Yubikey](https://www.yubico.com/store/#yubikey-5-series) or [Google Titan](https://cloud.google.com/titan-security-key). I bought mine on Amazon which arrived in two days.  Mine looks like this:
+* A hardware security key, the two best options are [Yubikey](https://www.yubico.com/store/#yubikey-5-series) or [Google Titan](https://cloud.google.com/titan-security-key). Mine looks like this:
 ![Yubikey](/assets/blog/using-webauthn-to-secure-your-digital-life/yubikey.jpg)
 
-Note: Before getting started, be aware of what you are about to do. You are about to register a second form of authentication for your various accounts. If you do not have this form present when logging in, **you will not be allowed to continue**. It would be wise to enable Two Factor Authentication initially via a Temporary One Time Passcode mobile app like [Authy](https://authy.com/) or using text messages sent to your phone number. This ensures that if you ever lose your security key, you can still use a second form to sign in. If you have not done this yet, you should do this now. 
+**Note:** Before getting started, be aware of what you are about to do. You are about to register a hardware security key as a second form of authentication for your various accounts. <mark>If you do not have this key physically present with you when logging in, you will not be allowed to continue.</mark> It would be wise to enable Two Factor Authentication initially via a Temporary One Time Passcode mobile app like [Authy](https://authy.com/) or using text messages sent to your phone number. This ensures that if you ever lose your security key, you can still use a second form to sign in. If you have not done this yet, you should do this now. 
 
 And if you haven’t downloaded and saved your recovery codes in a secure location like a password manager, you should do that as well. Recovery codes can be used to access your account in the event you lose access to your device and cannot receive two-factor authentication codes.
 
 ### How to set up a security key with Google
 1. Log in to your [Google](https://myaccount.google.com) account from your browser.
-2. Choose Security from the options on the left-hand side. 
-![](public/assets/blog/using-webauthn-to-secure-your-digital-life/google-01-settings.png)
+2. Choose `Security` from the options on the left-hand side. 
+![](/assets/blog/using-webauthn-to-secure-your-digital-life/google-01-settings.png)
 
-3. Under “Signing in to Google”, select 2-Step Verification.
+3. Under `Signing in to Google`, select 2-Step Verification.
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/google-02-two-step-verification.png)
 
-4. Under the “Add more second steps to verify it’s you” section, choose Add Security Key. 
+4. Under the `Add more second steps to verify it’s you` section, choose `Add Security Key`. 
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/google-03-add-security-key.png)
 
-5. Choose USB or Bluetooth option.  
+5. Choose `USB or Bluetooth` option.  
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/google-04-usb-option.png)
 
 6. Follow the instructions to register your security key. 
@@ -67,12 +69,12 @@ And if you haven’t downloaded and saved your recovery codes in a secure locati
 
 ### How to set up a security key with Twitter
 1. Log in to your [Twitter](https://twitter.com) account from your browser.
-2. Click on More and choose Settings and Privacy. 
+2. Click on More and choose `Settings and Privacy`. 
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/twitter-01-settings.png)
 
-3. Select Security and account access and then Manage your accounts security. 
+3. Select `Security and account access` and then `Manage your accounts security`. 
 4. Select Two-factor authentication. 
-5. Click the Security key check box.  
+5. Click the `Security key` check box.  
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/twitter-02-two-factor-authentication.png)
 
 6. Follow the instructions to register and verify your security key by touching it.  
@@ -84,13 +86,13 @@ And if you haven’t downloaded and saved your recovery codes in a secure locati
 
 ### How to set up a security key with Github
 1. Log in to your [GitHub](https://github.com) account from your browser. 
-2. Click on your profile image in the top right, and choose Settings. 
+2. Click on your profile image in the top right, and choose `Settings`. 
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/github-01-settings.png)
 
-3. Select Account Security then Add. 
+3. Select `Account Security` then `Add`. 
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/github-02-two-factor-authentication.png)
 
-4. Under Security keys section, register your new security key. 
+4. Under `Security keys` section, register your new security key. 
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/github-03-register-new-security-key.png)
 
 5. Enter a name for this security key.
@@ -98,7 +100,6 @@ And if you haven’t downloaded and saved your recovery codes in a secure locati
 7. Insert your security key into your computer and touch it. 
 8. Your key should now be registered with GitHub! 
 ![](/assets/blog/using-webauthn-to-secure-your-digital-life/github-04-registered-key.png)
-
 
 It is that easy! You have now made a giant leap in securing your digital life all thanks to WebAuthn.  
 
