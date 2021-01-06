@@ -14,9 +14,9 @@ export default function WebAuthn() {
                     <p className="pb-2 text-white">You have created a new credential for this site. The <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId" target="_blank">rawId</a> and the <a className="text-light-steel-blue" href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential" target="_blank">public key</a> are all that are needed to identify you. No more passwords! No more personal identifying data!</p>
                     <p className="pb-6 text-white">Using the rawId, you can authenticate as the user you just created.</p> 
                     <form className="flex flex-col relative">
-                            <div>Your username: <span className="border-b-2 border-imperial-red">{user}</span></div>
-                            <div className="truncate">Your rawId: <span className="border-b-2 border-imperial-red">{binToStr(rawId)}</span></div>
-                            <div className="relative -bottom-1 left-20 text-xs">^ Trust me, it's long.</div>
+                            <div className="text-white">Your username: <span className="border-b-2 border-imperial-red">{user}</span></div>
+                            <div className="text-white truncate">Your rawId: <span className="border-b-2 border-imperial-red">{binToStr(rawId)}</span></div>
+                            <div className="text-white relative -bottom-1 left-20 text-xs">^ Trust me, it's long.</div>
                         <a
                             onClick={() => authenticate(user, rawId, authState, setAuthState, setError)}
                             className="bg-white text-prussian-blue hover:text-imperial-red font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mt-4 lg:mb-0 self-start"
