@@ -33,6 +33,8 @@ The Web Authentication API (also known as WebAuthn) is a [specification](https:/
 * **Roaming authenticators** — These are removable and cross-platform devices, like a [Yubikey](https://www.nytimes.com/wirecutter/reviews/best-security-keys/) that can be used on multiple devices. To authenticate with a roaming authenticator, you simply connect it to the device (through USB, NFC, or Bluetooth), provide proof of presence (e.g., touching it), and optionally an additional authentication factor like a PIN or fingerprint recognition.
 * **Platform authenticators** — This option includes the MacBook’s TouchBar, Windows Hello, iOS Touch_FaceId, and Android’s fingerprint_face recognition. Integrated into the device being used, these only work on that device.
 
+![WebAuthn flow diagram](/assets/blog/using-webauthn-to-secure-your-digital-life/webauthn-cover.png)
+
 In the context of this article, we are focusing on Roaming Authenticators, but just know that WebAuthn enables both, opening up a lot of possibilities for secure user authentication in the future. 
 
 ## How to set up and use a security key
