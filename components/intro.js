@@ -37,6 +37,7 @@ export default function Intro() {
               <a
                 href={`${LINKEDIN_URL}`}
                 target="_blank"
+                rel="me"
                 className="bg-linkedin hover:bg-white hover:text-black border border-linkedin text-white text-xs md:text-base font-bold py-3 px-6 lg:px-8 duration-200 transition-colors mb-4 lg:mb-0 self-start"
               >
                 View LinkedIn
@@ -44,6 +45,7 @@ export default function Intro() {
               <a
                 href={`${GITHUB_URL}`}
                 target="_blank"
+                rel="me"
                 className="bg-github hover:bg-white hover:text-black border border-github text-white text-xs md:text-base font-bold py-3 px-6 md:px-6 lg:px-8 duration-200 transition-colors md:mx-3 mb-4 lg:mb-0 self-start"
               >
                 View GitHub
