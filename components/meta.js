@@ -38,6 +38,7 @@ export default function Meta() {
       <meta property="og:image" content="/assets/og-image.png" />
       <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
       <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+      <link rel="microsub" href="https://aperture.p3k.io/microsub/595"></link>
     </Head>
   )
 }
