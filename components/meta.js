@@ -36,6 +36,8 @@ export default function Meta() {
         content={`Tyler Nix is a Senior Solutions Engineer at Auth0 with experience in Web Development and Cloud Computing who specializes in Identity and Application Security.`}
       />
       <meta property="og:image" content="/assets/og-image.png" />
+      <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+      <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
     </Head>
   )
 }
