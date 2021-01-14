@@ -10,7 +10,7 @@ ogImage:
   url: '/assets/blog/using-webauthn-to-secure-your-digital-life/webauthn-cover.png'
 ---
 
-Since ancient times, we have used passwords to grant access to privileged information. Guards allow access to buildings if correctly presented with a password. Soldiers exchange passwords and counterpasswords to correctly identity each other. Even 8-year old secret societies allow entry to magical tree forts after declaring the super-duper secret passphrase. And when computers were first invented, how did we decide how to secure them? Passwords! Because, well, that’s all we had.
+Since ancient times, we have used passwords to grant access to privileged information. Guards allow access to buildings if correctly presented with a password. Soldiers exchange passwords and counterpasswords to correctly identify each other. Even 8-year old secret societies allow entry to magical tree forts after declaring the super-duper secret passphrase. And when computers were first invented, how did we decide how to secure them? Passwords! Because, well, that’s all we had.
 
 But if there is anything that we have learned since Robert Morris first started storing login passwords in a hashed form in the 1970s, it is that passwords are messy. They are [hard to remember]( https://www.digitalinformationworld.com/2019/12/new-password-study-finds-78-of-people-had-to-reset-a-password-they-forgot-in-past-90-days.html), [easily guessed](https://nordpass.com/most-common-passwords-list/), and [annoying if leaked]( https://www.pcmag.com/how-to/what-to-do-when-youve-been-hacked). 
 
