@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
 
 export default function Meta() {
   return (
     <Head>
       <link
         rel="apple-touch-icon"
-        sizes="180x180"
+        sizes="152x152"
         href="/favicon/apple-touch-icon.png"
       />
       <link
@@ -25,18 +24,21 @@ export default function Meta() {
       <link
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
-        color="#000000"
+        color="#5bbad5"
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="#000" />
+      <meta name="theme-color" content="#ffffff" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content={`Tyler Nix is a Senior Solutions Engineer at Auth0 with experience in Web Development and Cloud Computing who specializes in Identity and Application Security.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image" content="/assets/og-image.png" />
+      <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+      <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+      <link rel="microsub" href="https://aperture.p3k.io/microsub/595"></link>
     </Head>
   )
 }

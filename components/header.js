@@ -6,18 +6,18 @@ import auth0 from '../../lib/auth0';
 export default function Header() {
   return (
     <Container>
-      <div class="flex justify-between text-sm text-gray-700 flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+      <div class="flex justify-between text-sm text-prussian-blue flex-col md:flex-row flex items-left md:items-center md:justify-between my-8 md:my-12">
         <div class="flex items-center">
           <a href="/">
-            <img src="assets/tnix.png"></img>
+            <img className="w-24" src="/assets/tnix-logo.png"></img>
           </a>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center pt-8 space-y-4 md:space-y-0">
-          <a href="/projects" class="mx-3 text-base hover:underline">
-            Projects
+        <div class="hidden md:flex md:flex-row items-center pt-6 space-y-4 md:space-y-0">
+          <a href="/" class="mx-3 text-base hover:underline">
+            Home
           </a>
-          <a href="Blog" class="mx-3 text-base hover:underline">
+          <a href="/blog" class="mx-3 text-base hover:underline">
             Blog
           </a>
           <a
