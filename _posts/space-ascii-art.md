@@ -1,6 +1,6 @@
 ---
 title: 'Space ASCII Art'
-excerpt: 'I have always been fascinated about outer space...and ASCII art. Something metaphorical about creating art displayed on computers using the very same 1s and 0s inputted and read by the computer.'
+excerpt: 'I have always been fascinated with outer space...and ASCII art. Something metaphorical about creating art displayed on computers using the very same 1s and 0s inputted and read by the computer.'
 coverImage: '/assets/blog/space-ascii-art/cover.png'
 date: '2021-02-02T05:35:07.322Z'
 author:
