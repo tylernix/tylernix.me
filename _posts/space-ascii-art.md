@@ -1,6 +1,6 @@
 ---
 title: 'Space ASCII Art'
-excerpt: 'I have always been fascinated about outer space...and ASCII art.'
+excerpt: 'I have always been fascinated about outer space...and ASCII art. Something metaphorical about creating art displayed on computers using the very same 1s and 0s inputted and read by the computer.'
 coverImage: '/assets/blog/space-ascii-art/cover.png'
 date: '2021-02-02T05:35:07.322Z'
 author:
@@ -12,34 +12,22 @@ ogImage:
 
 I have always been fascinated with outer space. Something about looking up into the stars and realizing how utterly small we are compared to the rest of the universe. It's a humbling experience. 
 
-While I know it is old school, I have always enjoyed looking at ASCII art. Something metephorical about creating art displayed on computers using the very same 1s and 0s inputted and read by the computer. For those who don't know what ASCII is, ASCII is abberviated from American Standard Code for Information Interchange who a defined character encoding standard for electronic communication. Simply speaking, ASCII binary "codes" translate to displayed characters in computers. I just used 51 ASCII codes to write this sentance. 
+While I know it is old school, I have always enjoyed looking at ASCII art too - <mark>something metaphorical about creating art displayed on computers using the very same 1s and 0s inputted and read by the computer.</mark> For those who don't know what ASCII is, ASCII is abbreviated from 'American Standard Code for Information Interchange' who defined character encoding standard for electronic communication. Simply speaking, ASCII binary "codes" translate to displayed characters in computers. I just used 51 ASCII codes to write this sentence. 
 
-These are some of my favorite I have enjoyed over the years. Simply copy and paste them anwhere you like. If you find any cool ones, let me know, and I can add them here.
+Combining two of my favorite things, these are some I have enjoyed over the years. Best part? Simply copy and paste them anywhere you like.
+
+If you find any cool ones, let me know so I can add them here.
 
 ```
-              _-o#&&*''''?d:>b\_
-          _o/"`''  '',, dMF9MMMMMHo_
-       .o&#'        `"MbHMMMMMMMMMMMHo.
-     .o"" '         vodM*$&&HMMMMMMMMMM?.
-    ,'              $M&ood,~'`(&##MMMMMMH\
-   /               ,MMMMMMM#b?#bobMMMMHMMML
-  &              ?MMMMMMMMMMMMMMMMM7MMM$R*Hk
- ?$.            :MMMMMMMMMMMMMMMMMMM/HMMM|`*L
-|               |MMMMMMMMMMMMMMMMMMMMbMH'   T,
-$H#:            `*MMMMMMMMMMMMMMMMMMMMb#}'  `?
-]MMH#             ""*""""*#MMMMMMMMMMMMM'    -
-MMMMMb_                   |MMMMMMMMMMMP'     :
-HMMMMMMMHo                 `MMMMMMMMMT       .
-?MMMMMMMMP                  9MMMMMMMM}       -
--?MMMMMMM                  |MMMMMMMMM?,d-    '
- :|MMMMMM-                 `MMMMMMMT .M|.   :
-  .9MMM[                    &MMMMM*' `'    .
-   :9MMk                    `MMM#"        -
-     &M}                     `          .-
-      `&.                             .
-        `~,   .                     ./
-            . _                  .-
-              '`--._,dd###pp=""'
+
+         ,MMM8&&&.
+    _...MMMMM88&&&&..._
+ .::'''MMMMM88&&&&&&'''::.
+::     MMMMM88&&&&&&     ::
+'::....MMMMM88&&&&&&....::'
+   `''''MMMMM88&&&&''''`
+         'MMM8&&&'
+
 ```
 
 ```
@@ -57,7 +45,7 @@ HMMMMMMMHo                 `MMMMMMMMMT       .
          \    \   |
          /    /   /
          /-._/-._/
-  jgs    \   `\  \
+         \   `\  \
           `-._/._/
 ```
 
@@ -68,7 +56,6 @@ HMMMMMMMHo                 `MMMMMMMMMT       .
       / \
      /___\
     |=   =|
-    |     |
     |     |
     |     |
     |     |
@@ -93,7 +80,7 @@ HMMMMMMMHo                 `MMMMMMMMMT       .
        .
        .
 ```
-^^ P.S. I build this into into a lot of the software that I write as an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) (including this site). 
+^^ Fun fact: I hide this rocket in many of the websites I build as a type of [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)). Can you find it?? 
 
 ```
  .              +   .                .   . .     .  .
@@ -116,10 +103,11 @@ HMMMMMMMHo                 `MMMMMMMMMT       .
 ```
 
 ```
-       .-.      _______                             .  '  *   .  . '
-      {}``; |==|_______D                              .  * * -+-  
-      / ('        /|\                             .    * .    '  *
-  (  /  |        / | \                                * .  ' .  . 
-   \(_)_]]      /  |  \                            *   *  .   .
-                                                     '   *
+       .-.      _______                .  '  *   .  . '
+      {}``; |==|_______D                 .  * * -+-  
+      / ('        /|\                .    * .    '  *
+  (  /  |        / | \                   * .  ' .  . 
+   \(_)_]]      /  |  \               *   *  .   .
+                                        '   *
 ```
+   
