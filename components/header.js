@@ -16,6 +16,9 @@ export default function Header() {
           <a href="/" class="mx-3 text-base hover:underline">
             Home
           </a>
+          <a href="/about" class="mx-3 text-base hover:underline">
+            About
+          </a>
           <a href="/blog" class="mx-3 text-base hover:underline">
             Blog
           </a>
