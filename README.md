@@ -15,7 +15,7 @@ I wanted to play with Next.js's [Static Generation](https://nextjs.org/docs/basi
 
 My blog posts are stored in `/_posts` as Markdown files. Super simple. I try to treat this website kind of like a [digital garden](https://joelhooks.com/digital-garden) for my most recent curiosities.
 
-I also wanted to get better at building my own designs. I sketch (most) ideas for this website out before I write any code using [Figma](https://figma.com). 
+I also wanted to get better at building my own designs. I sketch (most) ideas for this website before I write any code using [Figma](https://figma.com).
 
 ## How to create your own
 
