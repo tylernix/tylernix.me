@@ -2,15 +2,20 @@
 
 My personal website that I designed using [Figma](https://figma.com), built using [Next.js](https://nextjs.org), and host using [Vercel](https://vercel.com).
 
-I wanted to play with Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+![demo](/public/assets/preview-03-01-21.png)
 
-My blog posts are stored in `/_posts` as Markdown files. Super simple. I try to treat this website kind of like a [digital garden](https://joelhooks.com/digital-garden) for my most recent curiosities.
 
 ## Visit
 
 [https://tylernix.me/](https://tylernix.me/)
 
-![demo](/public/assets/preview-03-01-21.png)
+## Why
+
+I wanted to play with Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+
+My blog posts are stored in `/_posts` as Markdown files. Super simple. I try to treat this website kind of like a [digital garden](https://joelhooks.com/digital-garden) for my most recent curiosities.
+
+I also wanted to get better at building my own designs. I sketch (most) ideas for this website out before I write any code using [Figma](https://figma.com). 
 
 ## How to create your own
 
