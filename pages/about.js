@@ -1,15 +1,10 @@
-import Avatar from '../components/avatar'
+
 import Container from '../components/container'
-import PostTitle from '../components/post-title'
-import PostBody from '../components/post-body'
-import SectionSeparator from '../components/section-separator'
-import Intro from '../components/intro'
-import WebAuthn from '../components/webauthn'
+import PageTitle from '../components/page-title'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
@@ -22,9 +17,8 @@ export default function Index({ allPosts }) {
         </Head>
           <Header />
           <Container>
-            <PostTitle>About</PostTitle>
-            <hr className="mb-6 md:mb-12" />
             <div className="max-w-2xl mx-auto my-12">
+                <PageTitle>About</PageTitle>
                 <div className="prose lg:prose-xl">
                     <p>My favorite quote is <blockquote>“A lot of what people call intelligence boils down to curiosity.” - Aaron Swartz</blockquote></p>
                     <p>The one word that I hope comes to mind when someone thinks of me is <b>dependable</b>. Aaaaand if I had to choose the second best word to describe me, it would be <b>curious</b> because it most accurately represents how I try to approach each day in a rapidly advancing world: a passion for absorbing varying information and communicating its proper value. </p>
