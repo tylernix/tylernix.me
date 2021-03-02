@@ -42,7 +42,7 @@ export default function Header() {
         <a href="/about" className="text-base mx-4 hover:underline">
           About
         </a>
-        <a href="#" className="ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-white bg-imperial-red hover:bg-prussian-blue">
+        <a href="/blog" className="ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base text-white bg-imperial-red hover:bg-prussian-blue">
           Blog
         </a>
       </div>
@@ -59,7 +59,7 @@ export default function Header() {
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   --> */}
-  <div className={"absolute top-0 inset-x-0 pt-7 -mx-2 transition transform origin-top-right md:hidden" + (navbarOpen ? " block" : " hidden")}>
+  <div className={"absolute top-0 inset-x-0 pt-7 -mx-2 transition transform origin-top-right md:hidden z-10" + (navbarOpen ? " block" : " hidden")}>
     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div className="pt-5 pb-6 px-5">
         <div className="flex items-center justify-between">
