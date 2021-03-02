@@ -19,7 +19,7 @@ export default function Intro() {
           <div className="md:hidden min-w-max mt-2">
             <img className="border border-cool-steel-blue rounded-full w-20" src="assets/profile-circle.png" />
           </div>
-          <div className="flex flex-col pl-8 md:pl-14 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-8 p-4 lg:mb-0">
+          <div className="flex flex-col pl-8 md:pl-14 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-8 p-4 pr-0 md:pr-4 lg:mb-0">
             <h1 className="md:flex text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-tight text-prussian-blue">Hi, I'm Tyler <span className="text-6xl lg:text-7xl text-imperial-red" >.</span></h1>
             <h4 className="text-sm md:text-xl text-prussian-blue md:max-w-3xl mb-4">
               I am a Senior Solutions Engineer at{" "}
