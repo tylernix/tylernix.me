@@ -24,19 +24,22 @@ export default function Profile() {
         </Head>
           <Header />
           <Container>
+            <div className="prose lg:prose-xl">
               {user && 
                 <div>
                   <img src={user.picture} alt={user.name} />
-                  <h2><b>User Name:</b> {user.name ? user.name : "None"}</h2>
+                  <p><b>User Name:</b> {user.name ? user.name : "None"}</p>
                   <p><b>User Email:</b> {user.email ? user.email : "None"}</p>
                   <p><b>User ID:</b> {user.sub}</p>
                 </div>
               }
               {!user && 
                 <div>
-                  <p>Please sign in to see your profile.</p>
+                  <p>Please <a className="" href="/api/auth/login">sign in</a> to see your profile.</p>
                 </div>
-              }        
+              }     
+            </div>
+                 
           </Container>
       </Layout>
     </>

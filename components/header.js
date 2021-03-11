@@ -26,14 +26,6 @@ export default function Header() {
                 </svg>
               </button>
             </div>
-            {/* <nav className="hidden md:flex space-x-10">
-              <a href="/" className="text-base font-medium mx-4 hover:underline">
-                Home
-              </a>
-              <a href="/about" className="text-base font-medium mx-4 hover:underline">
-                About
-              </a>
-            </nav> */}
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <a href="/" className="text-base mx-4 hover:underline">
                 Home
@@ -111,12 +103,6 @@ export default function Header() {
                 <a href="/blog" className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-imperial-red hover:bg-prussian-blue">
                   Blog
                 </a>
-                {/* <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p> */}
               </div>
             </div>
           </div>
