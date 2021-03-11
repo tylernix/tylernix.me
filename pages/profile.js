@@ -27,8 +27,9 @@ export default function Profile() {
               {user && 
                 <div>
                   <img src={user.picture} alt={user.name} />
-                  <h2>{user.name}</h2>
-                  <p>{user.email}</p>
+                  <h2><b>User Name:</b> {user.name ? user.name : "None"}</h2>
+                  <p><b>User Email:</b> {user.email ? user.email : "None"}</p>
+                  <p><b>User ID:</b> {user.sub}</p>
                 </div>
               }
               {!user && 
