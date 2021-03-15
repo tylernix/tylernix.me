@@ -17,7 +17,7 @@ import { handleAuth, handleLogin } from '@auth0/nextjs-auth0';
 //     getLoginState
 // }
 
-let returnTo = "http://localhost:3000/profile";
+let returnTo = "/profile";
 
 export default handleAuth({
     async loginHandler(req, res) {
