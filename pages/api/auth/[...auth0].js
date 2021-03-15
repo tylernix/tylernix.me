@@ -20,7 +20,7 @@ import { handleAuth, handleLogin } from '@auth0/nextjs-auth0';
 let returnTo = "/profile";
 
 export default handleAuth({
-    async loginHandler(req, res) {
+    async login(req, res) {
         try {
             await handleLogin(req, res, { returnTo });
         } catch (error) {
