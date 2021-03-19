@@ -1,1 +1,5 @@
 /* Stylesheet for Moon App (client_id: t063byHVfxbdfV7HKiU0Jq9EPzmgkB1I) */
+button._button-login-id {
+    background-color: #FDE68A;
+    color: black;
+}

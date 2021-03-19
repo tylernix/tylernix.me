@@ -1,1 +1,5 @@
 /* Stylesheet for Mars App (client_id: iiLFKyZ9J2Yf0bPJykarAaX716umkDJ9) */
+button._button-login-id {
+    background-color: #2563EB;
+    color: white;
+}
