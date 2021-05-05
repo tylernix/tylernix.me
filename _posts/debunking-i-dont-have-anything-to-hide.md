@@ -2,7 +2,7 @@
 title: 'Debunking "I dont have anything to hide"'
 excerpt: 'Digital privacy is less about you not having anything illegal to hide, and more about you having a choice on who reads/hears your information.'
 coverImage: '/assets/blog/debunking-i-dont-have-anything-to-hide/cover.jpg'
-date: '2021-04-04T05:35:07.322Z'
+date: '2021-05-04T05:35:07.322Z'
 author:
   name: Tyler Nix
   picture: '/assets/blog/authors/tyler.jpeg'
@@ -10,7 +10,8 @@ ogImage:
   url: '/assets/blog/debunking-i-dont-have-anything-to-hide/cover.jpg'
 ---
 
-I often hear a common statement when talking with friends or colleagues about digital privacy and why it matters. It usually comes up right after I mention that some company (which offers a really great product for free) is reading/watching/listening way more invasively than they should be allowed. Queue the statement, “Yeah, but I don’t have anything to hide.” 
+I often hear a common statement when talking with friends or colleagues about digital privacy and why it matters. It usually comes up right after I mention that some company (which offers a really great product for free) is reading/watching/listening way more invasively than they should be allowed. Queue the statement, 
+> Yeah, but I don’t have anything to hide.
 
 🤦‍♂️🤦‍♀️🤦
 
@@ -26,7 +27,8 @@ If you have ever
 * kept a secret with a friend
 * closed your house curtains
 * you get the idea... 
-you do having something to hide. It is less about you not having anything illegal to hide, and more about you having a choice on who reads/hears this information you are sharing. <mark>And if you still want a choice on how YOUR information is used, then digital privacy very much matters to you.</mark>
+
+you **do** having something to hide. It is less about you not having anything illegal to hide, and more about you having a choice on who reads/hears this information you are sharing. <mark>And if you still want a choice on how YOUR information is used, then digital privacy very much matters to you.</mark>
 
 Contemplate this...
 
@@ -45,6 +47,7 @@ I think a lot of people don’t realize that even though these services aren’t
 So what are some things you can do about it? Switching to online services that respect your privacy is a good start. While I don’t agree with every recommendation, https://privacytools.io/ does provide a good, comprehensive list of privacy-centric services. 
 
 But I’ll share my top five:
+
 1. [Firefox](https://www.mozilla.org/en-US/firefox/) serves as a good alternative for my web browser.
 2. I have lately been impressed with the search engine results from [DuckDuckGo](https://duckduckgo.com/).
 3. I’ve made the switch from Gmail to [ProtonMail](https://protonmail.com/) as my email provider, and I am so glad I did.
@@ -54,4 +57,6 @@ But I’ll share my top five:
 I feel like this [tweet](https://twitter.com/tommorris/status/1360193333419773952) from Tom Morris sums this article up pretty well.
 
 > If any person behaved like an app—rifled through your address book, fitted a tracking device to your car, obsessively logged what books and TV shows you watched, and wanted to disturb you at any moment of the day or night—you’d throw them out of your house and call the police. — Tom Morris (@tommorris)
+
+What do you think? Send me an [email](mailto:tylernix@pm.me). 
  
