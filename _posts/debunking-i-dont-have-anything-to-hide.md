@@ -13,11 +13,9 @@ ogImage:
 I often hear a common statement when talking with friends or colleagues about digital privacy and why it matters. It usually comes up right after I mention that some company (which offers a really great product for free) is reading/watching/listening way more than they should. Queue the statement, 
 > Yeah, I agree, but I don’t have anything to hide.
 
-🤦‍♂️🤦‍♀️🤦
-
 Sure, most people aren’t doing something illegal that would get them thrown in jail. 
 
-Sure, the product is extremely useful and convenient. But the truth is, each one of us still has information you do not want to share with others. 
+Sure, the product is extremely useful and convenient. But the truth is, each one of us still has information we do not want to share with others. 
 
 If you have ever
 * sent a letter in an envelope
