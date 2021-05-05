@@ -1,12 +1,21 @@
-# Tyler Nix's Blog
+# tylernix.me
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+My personal website that I designed using [Figma](https://figma.com), built using [Next.js](https://nextjs.org), and host using [Vercel](https://vercel.com).
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+![demo](/public/assets/preview-03-01-21.png)
+
 
 ## Visit
 
 [https://tylernix.me/](https://tylernix.me/)
+
+## Why
+
+I wanted to play with Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
+
+My blog posts are stored in `/_posts` as Markdown files. Super simple. I try to treat this website kind of like a [digital garden](https://joelhooks.com/digital-garden) for my most recent curiosities.
+
+I also wanted to get better at building my own designs. I sketch (most) ideas for this website before I write any code using [Figma](https://figma.com).
 
 ## How to create your own
 

@@ -1,6 +1,5 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import WebAuthn from '../components/webauthn'
 import Layout from '../components/layout'
@@ -10,8 +9,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 
 export default function Index({ allPosts }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const recentPosts = allPosts.slice(0,4)
   return (
     <>
       <Layout>
@@ -22,7 +20,7 @@ export default function Index({ allPosts }) {
           <Intro />
           <WebAuthn />
           <Container>
-          <MoreStories posts={allPosts} />
+          <MoreStories posts={recentPosts} />
         </Container>
       </Layout>
     </>
@@ -37,7 +35,7 @@ export async function getStaticProps() {
     'author',
     'coverImage',
     'excerpt',
-  ])
+  ], 3)
 
   return {
     props: { allPosts },
