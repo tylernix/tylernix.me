@@ -11,7 +11,7 @@ ogImage:
 ---
 
 I often hear a common statement when talking with friends or colleagues about digital privacy and why it matters. It usually comes up right after I mention that some company (which offers a really great product for free) is reading/watching/listening way more than they should. Queue the statement, 
-> Yeah, but I don’t have anything to hide.
+> Yeah, I agree, but I don’t have anything to hide.
 
 🤦‍♂️🤦‍♀️🤦
 
