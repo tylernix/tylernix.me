@@ -20,6 +20,8 @@ export default function ViewCounter({ slug }) {
     registerView();
   }, [slug]);
 
-  return `${views > 0 ? views.toLocaleString() : '–––'} views`;
+  const element = `${views > 0 ? views.toLocaleString() : '–––'} views`;
+
+  return <div className="text-md text-gray-400">{element}</div>;
 }
 

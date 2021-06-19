@@ -8,7 +8,7 @@ export default function PostHeader({ title, coverImage, date, author, slug }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="flex flex-col md:flex-row justify-center gap-x-2 mb-4 text-md text-center text-gray-400">
+      <div className="flex flex-col md:flex-row justify-center space-x-2 mb-4 text-md text-center text-gray-400">
           <DateFormatter dateString={date} displayDistance={true}/>
           <p className="hidden md:flex text-md text-gray-400">|</p>
           <ViewCounter slug={slug} />
