@@ -1,5 +1,5 @@
 import React from 'react';
-import { useUser } from '@auth0/nextjs-auth0';
+//import { useUser } from '@auth0/nextjs-auth0';
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
@@ -9,11 +9,13 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
+import useAuth from '../hooks/useAuth'
 
 export default function Profile() {
-  const { user, error, isLoading } = useUser();
+  const { user, loading, error } = useAuth();
+  console.log(user);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
   return (
@@ -27,15 +29,12 @@ export default function Profile() {
             <div className="prose lg:prose-xl">
               {user && 
                 <div>
-                  <img src={user.picture} alt={user.name} />
-                  <p><b>User Name:</b> {user.name ? user.name : "None"}</p>
                   <p><b>User Email:</b> {user.email ? user.email : "None"}</p>
-                  <p><b>User ID:</b> {user.sub}</p>
                 </div>
               }
               {!user && 
                 <div>
-                  <p>Please <a className="" href="/api/auth/login">sign in</a> to see your profile.</p>
+                  <p>Please <a className="" href="/api/login">sign in</a> to see your profile.</p>
                 </div>
               }     
             </div>

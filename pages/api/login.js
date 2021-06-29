@@ -1,50 +1,21 @@
 import axios from 'axios'
 import Iron from '@hapi/iron'
 import CookieService from '../../lib/cookie'
+import { Magic } from '@magic-sdk/admin'
 
-export default (req, res) => {
-    console.log("/login " + req.method);
-    if (req.method == 'POST') {
-        const url = process.env.AUTH0_ISSUER_BASE_URL + "/passwordless/start"
-        axios.post(url, {
-            client_id: process.env.AUTH0_CLIENT_ID,
-            client_secret: process.env.AUTH0_CLIENT_SECRET,
-            connection: 'email',
-            email: req.body.email,
-            send: 'link',
-            authParams: {
-                redirect_uri: process.env.AUTH0_BASE_URL + "/api/login",
-                response_type: 'code',
-                state: 'random-state'
-            }
-        }).then(response => {
-            console.log(response.data);
-        }).catch(error => {
-            console.log(error);
-        });
+let magic = new Magic(process.env.MAGIC_SECRET_KEY)
 
-        return res.status(200).end();
-    }
-  
-    if (req.method == 'GET') {
-        const url = process.env.AUTH0_ISSUER_BASE_URL + "/oauth/token"
-        axios.post(url, {
-            grant_type: 'authorization_code',
-            client_id: process.env.AUTH0_CLIENT_ID,
-            client_secret: process.env.AUTH0_CLIENT_SECRET,
-            code: req.query.code,
-            scope: 'openid profile email',
-            redirect_uri: 'http://localhost:3000/api/login',
-            state: 'random-state'
-        }).then(response => {
-            console.log(response.data);
-            const token = Iron.seal(response.data.id_token, process.env.AUTH0_SECRET, Iron.defaults);
-            CookieService.setTokenCookie(res, token);
-        }).catch(error => {
-            console.log(error);
-        });
+export default async (req, res) => {
+    if (req.method !== 'POST') return res.status(405).end()
 
-        return res.status(200).end();
-    }
-    
-  }
+    // exchange the did from Magic for some user data
+    const did = req.headers.authorization.split('Bearer').pop().trim()
+    console.log(magic.token.getPublicAddress(did));
+    const user = await new Magic(process.env.MAGIC_SECRET_KEY).users.getMetadataByToken(did)
+
+    // Author a couple of cookies to persist a user's session
+    const token = await Iron.seal(user, process.env.ENCRYPTION_SECRET, Iron.defaults)
+    CookieService.setTokenCookie(res, token)
+
+    res.end()
+}
