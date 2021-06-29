@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "../components/container";
+import Login from "../components/login";
 
 export default function Header() {
   
@@ -35,6 +36,7 @@ export default function Header() {
               <a href="/blog" className="ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md text-base text-white bg-imperial-red hover:bg-prussian-blue">
                 Blog
               </a>
+              <Login />
             </div>
           </div>
         </div>
