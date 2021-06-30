@@ -18,7 +18,7 @@ export default function Login() {
         .auth
         .loginWithMagicLink({ email: elements.email.value })
     
-        const authRequest = await fetch('/api/login', {
+        const authRequest = await fetch('/api/magic/login', {
             method: 'POST',
             headers: { Authorization: `Bearer ${did}` }
           })
@@ -40,7 +40,7 @@ export default function Login() {
                 </form>
             )}
             {user && (
-                <a href="/api/logout">Log Out</a>
+                <a href="/api/magic/logout">Log Out</a>
             )} 
         </>
     )
