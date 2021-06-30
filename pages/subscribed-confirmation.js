@@ -11,7 +11,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import useUser from '../lib/hooks'
 
-export default function Profile() {
+export default function SubscribedConfirmation() {
   const { user, error } = useUser();
 
   if (error) return <div>{error.message}</div>;
@@ -20,17 +20,15 @@ export default function Profile() {
     <>
       <Layout>
         <Head>
-          <title>Profile</title>
+          <title>Congrats!</title>
         </Head>
           <Header />
           <Container>
             <div className="prose lg:prose-xl">
-              {user && 
                 <div>
-                  <p>Your session:</p>
-                  <pre>{JSON.stringify(user, null,2)}</pre>
+                  <p>Your are subscribed.</p>
+                  <p>Did you know? ...</p>
                 </div>
-              }
             </div>
                  
           </Container>
