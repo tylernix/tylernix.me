@@ -9,13 +9,12 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
+import useUser from '../lib/hooks'
 import useAuth from '../hooks/useAuth'
 
 export default function Profile() {
-  const { user, loading, error } = useAuth();
-  console.log(user);
+  const { user, error } = useUser();
 
-  if (loading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
   return (
@@ -29,14 +28,10 @@ export default function Profile() {
             <div className="prose lg:prose-xl">
               {user && 
                 <div>
-                  <p><b>User Email:</b> {user.email ? user.email : "None"}</p>
+                  <p>Your session:</p>
+                  <pre>{JSON.stringify(user, null,2)}</pre>
                 </div>
               }
-              {!user && 
-                <div>
-                  <p>Please <a className="" href="/api/login">sign in</a> to see your profile.</p>
-                </div>
-              }     
             </div>
                  
           </Container>
