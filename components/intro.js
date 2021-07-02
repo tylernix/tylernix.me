@@ -1,6 +1,7 @@
 import { CMS_NAME } from "../lib/constants";
 import Container from "../components/container";
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL, EMAIL_URL } from "../lib/constants";
+import EmailSignupAuth0 from "./subscribe-auth0";
 
 export default function Intro() {
   return (
@@ -19,7 +20,7 @@ export default function Intro() {
           <div className="md:hidden min-w-max mt-2">
             <img className="border border-cool-steel-blue rounded-full w-20" src="assets/profile-circle.png" />
           </div>
-          <div className="flex flex-col pl-8 md:pl-14 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-8 p-4 pr-0 md:pr-4 lg:mb-0">
+          <div className="flex flex-col pl-8 pb-40 md:pb-4 md:pl-14 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-8 p-4 pr-0 md:pr-4 lg:mb-0">
             <h1 className="md:flex text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-tight text-prussian-blue">Hi, I'm Tyler <span className="text-6xl lg:text-7xl text-imperial-red" >.</span></h1>
             <h4 className="text-sm md:text-xl text-prussian-blue md:max-w-3xl mb-4">
               I am a Senior Solutions Engineer at{" "}
@@ -30,18 +31,13 @@ export default function Intro() {
               >
                 Auth0
               </a></span>{" "}
-              with experience in Web Development and Cloud Computing who
-              specializes in Identity and Application Security.
-            </h4>
-            <div className="flex flex-col md:flex-row lg:flex-col space-x-0 md:space-x-8 lg:space-x-0 lg:space-y-12 xl:space-y-28">
-              <a
-                href={`${EMAIL_URL}`}
-                target="_blank"
-                rel="me"
-                className="bg-imperial-red hover:bg-prussian-blue text-white text-sm md:text-base font-bold py-3 px-6 lg:px-8 duration-200 transition-colors self-start"
-              >
-                Let's chat
-              </a>
+              who discovered websites become even more magical when you give humans a way to securely login.
+            </h4>              
+              <div className="absolute bottom-0 left-0 md:relative ">
+                <EmailSignupAuth0 />
+              </div>
+              
+
               <div className="absolute top-28 left-0 md:relative md:top-0 md:left-0 flex flex-row items-center space-x-1">
                 <div className="hidden md:flex text-sm md:text-base text-gray-400 pr-2">Follow me: </div>
                 <a href={`${LINKEDIN_URL}`} target="_blank" className="" rel="me">
@@ -61,7 +57,6 @@ export default function Intro() {
                 </a>
               </div>
           
-            </div>
             </div>
         </div>
       </Container>

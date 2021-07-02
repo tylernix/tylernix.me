@@ -1,18 +1,44 @@
-import axios from 'axios'
-
-const buttondownKey = process.env.BUTTONDOWN_API_KEY;
 export default async function Signup(req, res) {
-    let config = {
-        headers: {
-            'Authorization': `Token ${process.env.BUTTONDOWN_API_KEY}`
-        }
+    const { email } = req.body.emailAddress;
+
+    if (!email) {
+        return res.status(400).json({ error: 'Email is required' });
     }
-    let data = {
-        email: req.body.emailAddress,
-        referrer_url: req.path
+
+    try {
+        const API_KEY = process.env.BUTTONDOWN_API_KEY;
+        const response = await fetch(
+            `https://api.buttondown.email/v1/subscribers`,
+            {
+              body: JSON.stringify({
+                email: email,
+                tags: ['tylernix.me']
+              }),
+              headers: {
+                Authorization: `Token ${API_KEY}`,
+                'Content-Type': 'application/json'
+              },
+              method: 'POST'
+            }
+        );
+
+        if (response.status >= 400) {
+            const text = await response.text();
+      
+            if (text.includes('already subscribed')) {
+              return res.status(400).json({
+                error: `You're already subscribed to my mailing list.`
+              });
+            }
+      
+            return res.status(400).json({
+              error: text
+            });
+          }
+          return res.status(201).json({ error: '' });
+    } catch(error) {
+        return res.status(500).json({ error: error.message || error.toString() });
     }
-    let response = await axios.post('https://api.buttondown.email/v1/subscribers', data, config);
-    return res.status(200).json(response.data)
 }
 
 
