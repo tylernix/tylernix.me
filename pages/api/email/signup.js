@@ -1,5 +1,5 @@
 export default async function Signup(req, res) {
-    const { email } = req.body.emailAddress;
+    const email = req.body.emailAddress;
 
     if (!email) {
         return res.status(400).json({ error: 'Email is required' });
@@ -21,7 +21,6 @@ export default async function Signup(req, res) {
               method: 'POST'
             }
         );
-
         if (response.status >= 400) {
             const text = await response.text();
       

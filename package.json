@@ -17,7 +17,7 @@
     "bootstrap": "^4.5.3",
     "classnames": "2.2.6",
     "date-fns": "^2.16.1",
-    "firebase-admin": "^9.9.0",
+    "firebase-admin": "^9.10.0",
     "gray-matter": "4.0.2",
     "magic-sdk": "^4.3.0",
     "next": "latest",

@@ -5,54 +5,77 @@ import useSWR from 'swr';
 import useUser from '../lib/hooks'
 import axios from 'axios'
 import fetcher from '../lib/fetcher';
+import LoadingSpinner from '../components/loading-spinner';
+import ErrorMessage from '../components/message-error';
+import SuccessMessage from '../components/message-success';
+import UnderlinedLink from './underlined-link';
 
 export default function Subscribe() {
     const { user, error } = useUser();
-    const router = useRouter()
-    let [response, setResponse] = useState();
+    const [response, setResponse] = useState();
+    const [form, setForm] = useState(false);
+    //const input = useRef(null);
+    //const router = useRouter()
 
-    const { data } = useSWR('/api/subscribers', fetcher);
-    const subscriberCount = new Number(data?.count);
+    //const { data } = useSWR('/api/subscribers', fetcher);
+    //const subscriberCount = new Number(data?.count);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setForm({ state: 'loading' });
+
         const { elements } = e.target;
         const email = elements.email.value;
     
-        // Subscribe user with email submitted
+        // Subscribe user to newsletter
         axios.post('/api/email/signup', {
             emailAddress: email
-        }).then(function(response) {
-            setResponse('WooHoo! This will be fun. By the way, check your email for an easter egg. ;)')
-            
+        }).then(function(response) {            
             // Send a passwordless authentication link to subscribed email
             axios.post('/api/auth0/login', {
                 email: email
             })
+
+            setForm({
+                state: 'success',
+                message: 'WooHoo! This will be fun. Check your email for a super-duper special link.'
+            });
+            
         }).catch(function (error) {
-            setResponse('Oops. Seems like this email is already subscribed OR your email is invalid. But I hope it was the first one :)')
+            setForm({
+                state: 'error',
+                message: 'Oops. Seems like this email is already subscribed...or I severely messed something up. 😬'
+            });
         })
     }
   
     return (
-        <>
-            { !user && (
-                <form onSubmit={handleSubmit} className="">
-                    <h4 className="text-sm md:text-xl text-prussian-blue md:max-w-3xl mb-4">
-                        I semi-frequently write about these things. So if you are a nerd like me and find these topics interesting, we should become friends.
-                    </h4>
-                    <div className="flex flex-row bg-white p-1 md:p-2 border md:border-2 rounded-md border-accent-2 hover:border-light-steel-blue">
-                        <input name='email' type='email' placeholder="your.favorite@email.com" className="text-sm md:text-base text-prussian-blue focus:outline-none w-full pl-7 pr-12 rounded-md" required />
-                        <button type="submit" className="bg-imperial-red hover:bg-prussian-blue rounded-md text-white text-sm md:text-base py-2 px-4 my-1 lg:px-8 duration-200 transition-colors self-start">
-                            Subscribe
-                        </button>
-                    </div>
-                    <p className="px-2 py-4">{response}</p>
-                </form>
+        <form onSubmit={handleSubmit} className="">
+            <h4 className="text-sm md:text-base lg:text-xl text-prussian-blue md:max-w-3xl mb-4">
+                I semi-frequently write about these things. So if you are a nerd like me and find frontend web dev and auth interesting, we should become friends.
+            </h4>
+            <div className="flex flex-row bg-white p-1 md:p-2 border md:border-2 rounded-md border-accent-2 hover:border-light-steel-blue">
+                <input 
+                    name='email' 
+                    aria-label="Email for newsletter"
+                    type='email' 
+                    placeholder="your.favorite@email.com" 
+                    required
+                    className="text-sm md:text-base text-prussian-blue focus:outline-none w-full pl-7 pr-10 rounded-md"  />
+                <button type="submit" className="bg-imperial-red hover:bg-prussian-blue rounded-md text-white text-sm md:text-base py-2 px-4 my-0 lg:px-8 duration-200 transition-colors self-start">
+                    {form.state === 'loading' ? <LoadingSpinner /> : 'Subscribe'}
+                </button>
+            </div>
+            {form.state === 'error' ? (
+                <ErrorMessage>{form.message}</ErrorMessage>
+            ) : form.state === 'success' ? (
+                <SuccessMessage>{form.message}</SuccessMessage>
+            ) : (
+                <p className="flex flex-row text-sm px-1 md:px-2 py-2">
+                    <b className="min-w-max pr-2">Fun fact:</b> 
+                    <p className="max-w-prose">Entering your email will also give you access to <UnderlinedLink href="/profile" text="top secret pages" /> about me I don't really want 99% of the internet reading.</p>
+                </p>
             )}
-            {user && (
-                <a href="/api/auth0/logout">Log Out</a>
-            )} 
-        </>
+        </form>
     )
 }

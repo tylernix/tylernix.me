@@ -42,7 +42,7 @@ export default async function login(req, res) {
           state: 'random-state'
       }).then(async response => {
           console.log(response.data);
-          // Should probably do some jwt validation here
+          // Should probably do some jwt validation here, but I don't have any data to hide for now, so...tomorrow
           await setLoginSession(res, response.data)
           res.writeHead(302, { Location: '/' })
           return res.status(200).end();
