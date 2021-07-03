@@ -1,6 +1,8 @@
 import { CMS_NAME } from "../lib/constants";
 import Container from "../components/container";
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL, EMAIL_URL } from "../lib/constants";
+import EmailSignupAuth0 from "./subscribe-auth0";
+import UnderlinedLink from "./underlined-link";
 
 export default function Intro() {
   return (
@@ -12,41 +14,30 @@ export default function Intro() {
         <img src="assets/tnix.png"></img>
       </a> */}
       <Container>
-        <div className="relative flex md:flex-row py-4 md:p-0 items-start md:items-end lg:items-end text-left ">
-          <div className="hidden md:flex">
+        <div className="relative flex md:flex-row py-4 md:p-0 items-start lg:items-end text-left ">
+          <div className="hidden lg:flex">
             <img className="w-full items-end" src="assets/profile.png" />
           </div>
-          <div className="md:hidden min-w-max mt-2">
+          <div className="flex lg:hidden min-w-max mt-2 md:ml-4">
             <img className="border border-cool-steel-blue rounded-full w-20" src="assets/profile-circle.png" />
           </div>
-          <div className="flex flex-col pl-8 md:pl-14 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-8 p-4 pr-0 md:pr-4 lg:mb-0">
-            <h1 className="md:flex text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-tight text-prussian-blue">Hi, I'm Tyler <span className="text-6xl lg:text-7xl text-imperial-red" >.</span></h1>
-            <h4 className="text-sm md:text-xl text-prussian-blue md:max-w-3xl mb-4">
-              I am a Senior Solutions Engineer at{" "}
-              <span className="border-b-2 border-imperial-red"><a
-                href="https://auth0.com"
-                className=" hover:text-imperial-red duration-200 transition-colors"
-                target="_blank"
-              >
-                Auth0
-              </a></span>{" "}
-              with experience in Web Development and Cloud Computing who
-              specializes in Identity and Application Security.
-            </h4>
-            <div className="flex flex-col md:flex-row lg:flex-col space-x-0 md:space-x-8 lg:space-x-0 lg:space-y-12 xl:space-y-28">
-              <a
-                href={`${EMAIL_URL}`}
-                target="_blank"
-                rel="me"
-                className="bg-imperial-red hover:bg-prussian-blue text-white text-sm md:text-base font-bold py-3 px-6 lg:px-8 duration-200 transition-colors self-start"
-              >
-                Let's chat
-              </a>
-              <div className="absolute top-28 left-0 md:relative md:top-0 md:left-0 flex flex-row items-center space-x-1">
-                <div className="hidden md:flex text-sm md:text-base text-gray-400 pr-2">Follow me: </div>
+          <div className="flex flex-col pl-8 pr-0 md:pb-4 md:pl-16 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-6 md:pr-4 lg:mb-0">
+            <h1 className="md:flex text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-tight text-prussian-blue">
+              Hi, I'm Tyler <span className="text-6xl lg:text-7xl text-imperial-red" >.</span>
+            </h1>
+            <h4 className="text-sm md:text-base lg:text-xl text-prussian-blue md:max-w-3xl">
+              I am a Senior Solutions Engineer at
+              <UnderlinedLink href="https://auth0.com" target="_blank" text="Auth0" />
+              who discovered websites become even more magical when you give humans a way to securely login.
+            </h4>              
+            <div className="hidden md:block pb-8">
+              <EmailSignupAuth0 />
+            </div>
+            <div className="absolute top-24 left-0 lg:relative lg:top-0 lg:left-0 flex flex-row items-center space-x-1">
+                <div className="hidden lg:flex text-sm md:text-base text-gray-400 pr-2">Find me: </div>
                 <a href={`${LINKEDIN_URL}`} target="_blank" className="" rel="me">
                   <svg className="h-6 w-6 md:h-8 md:w-8 text-prussian-blue hover:text-imperial-red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd" d="M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M4,4 L4,20 L20,20 L20,4 L4,4 Z M11.4521492,9.45214919 C11.935252,9.15825757 12.4822556,9 13,9 L14,9 C15.3939534,9 17,10.1471761 17,12 L17,16 L15,16 L15,12 C15,11.4242524 14.4060466,11 14,11 L13,11 C12.5939534,11 12,11.4242524 12,12 L12,16 L10,16 L10,9 L11,9 L11.4521492,9.45214919 Z M8,8 C7.44771525,8 7,7.55228475 7,7 C7,6.44771525 7.44771525,6 8,6 C8.55228475,6 9,6.44771525 9,7 C9,7.55228475 8.55228475,8 8,8 Z M9,16 L7,16 L7,9 L9,9 L9,16 Z"/>
+                    <path fillRule="evenodd" d="M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M4,4 L4,20 L20,20 L20,4 L4,4 Z M11.4521492,9.45214919 C11.935252,9.15825757 12.4822556,9 13,9 L14,9 C15.3939534,9 17,10.1471761 17,12 L17,16 L15,16 L15,12 C15,11.4242524 14.4060466,11 14,11 L13,11 C12.5939534,11 12,11.4242524 12,12 L12,16 L10,16 L10,9 L11,9 L11.4521492,9.45214919 Z M8,8 C7.44771525,8 7,7.55228475 7,7 C7,6.44771525 7.44771525,6 8,6 C8.55228475,6 9,6.44771525 9,7 C9,7.55228475 8.55228475,8 8,8 Z M9,16 L7,16 L7,9 L9,9 L9,16 Z"/>
                   </svg>
                 </a>
                 <a href={`${GITHUB_URL}`} target="_blank" className="" rel="me">
@@ -56,13 +47,15 @@ export default function Intro() {
                 </a>
                 <a href={`${TWITTER_URL}`} target="_blank" className="" rel="me">
                   <svg className="h-6 w-6 md:h-8 md:w-8 text-prussian-blue hover:text-imperial-red" id="i-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32" fill="currentColor">
-                    <path stroke-width="0" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
+                    <path strokeWidth="0" d="M60 16 L54 17 L58 12 L51 14 C42 4 28 15 32 24 C16 24 8 12 8 12 C8 12 2 21 12 28 L6 26 C6 32 10 36 17 38 L10 38 C14 46 21 46 21 46 C21 46 15 51 4 51 C37 67 57 37 54 21 Z" />
                 </svg>
                 </a>
               </div>
+          </div>
           
-            </div>
-            </div>
+        </div>
+        <div className="sm:relative md:hidden">
+            <EmailSignupAuth0 />
         </div>
       </Container>
     </section>
