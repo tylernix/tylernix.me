@@ -14,26 +14,26 @@ export default function Intro() {
         <img src="assets/tnix.png"></img>
       </a> */}
       <Container>
-        <div className="relative flex md:flex-row py-4 md:p-0 items-start lg:items-end text-left ">
+        <div className="relative flex md:flex-row py-4 md:p-0 md:pt-4 items-start lg:items-end text-left ">
           <div className="hidden lg:flex">
             <img className="w-full items-end" src="assets/profile.png" />
           </div>
           <div className="flex lg:hidden min-w-max mt-2 md:ml-4">
             <img className="border border-cool-steel-blue rounded-full w-20" src="assets/profile-circle.png" />
           </div>
-          <div className="flex flex-col pl-8 pr-0 md:pb-4 md:pl-16 lg:pl-28 space-y-4 md:space-y-6 lg:space-y-6 md:pr-4 lg:mb-0">
+          <div className="flex flex-col pl-8 md:pl-16 lg:pl-28 pr-0 md:pr-4 pt-0 md:pt-2 pb-1 md:pb-4 lg:pb-0 space-y-2 md:space-y-6 lg:space-y-8 ">
             <h1 className="md:flex text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-tight text-prussian-blue">
               Hi, I'm Tyler <span className="text-6xl lg:text-7xl text-imperial-red" >.</span>
             </h1>
             <h4 className="text-sm md:text-base lg:text-xl text-prussian-blue md:max-w-3xl">
-              I am a Senior Solutions Engineer at
+              I am a Solutions Engineer at
               <UnderlinedLink href="https://auth0.com" target="_blank" text="Auth0" />
               who discovered websites become even more magical when you give humans a way to securely login.
             </h4>              
-            <div className="hidden md:block pb-8">
+            <div className="hidden md:block lg:pb-4">
               <EmailSignupAuth0 />
             </div>
-            <div className="absolute top-24 left-0 lg:relative lg:top-0 lg:left-0 flex flex-row items-center space-x-1">
+            <div className="absolute top-28 left-0 md:top-24 lg:relative lg:top-0 lg:left-0 lg:pb-2 flex flex-row items-center space-x-1">
                 <div className="hidden lg:flex text-sm md:text-base text-gray-400 pr-2">Find me: </div>
                 <a href={`${LINKEDIN_URL}`} target="_blank" className="" rel="me">
                   <svg className="h-6 w-6 md:h-8 md:w-8 text-prussian-blue hover:text-imperial-red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
