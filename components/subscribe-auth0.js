@@ -39,7 +39,7 @@ export default function Subscribe({funFactText}) {
 
             setForm({
                 state: 'success',
-                message: 'WooHoo! This will be fun. Check your email for a super-duper special link.'
+                message: 'WooHoo! This will be fun. Check your email for a magic link.'
             });
             
         }).catch(function (error) {
