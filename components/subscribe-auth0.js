@@ -10,10 +10,11 @@ import ErrorMessage from '../components/message-error';
 import SuccessMessage from '../components/message-success';
 import UnderlinedLink from './underlined-link';
 
-export default function Subscribe() {
+export default function Subscribe({funFactText}) {
     const { user, error } = useUser();
     const [response, setResponse] = useState();
     const [form, setForm] = useState(false);
+    const funFact = (funFactText) ? funFactText : <>This is also a way to <UnderlinedLink href="/profile" target="_blank" text="login" /> to my website.</>
     //const input = useRef(null);
     //const router = useRouter()
 
@@ -50,9 +51,9 @@ export default function Subscribe() {
     }
   
     return (
-        <form onSubmit={handleSubmit} className="">
+        <form onSubmit={handleSubmit} className="pb-4">
             <h4 className="text-sm md:text-base lg:text-xl text-prussian-blue md:max-w-3xl mb-4">
-                I semi-frequently write about these things. So if you are a nerd like me and find frontend web dev and auth interesting, we should become friends.
+                I semi-frequently write about frontend web dev + auth + app security, so if you are a nerd like me and find things interesting, we should become friends.
             </h4>
             <div className="flex flex-row bg-white p-1 md:p-2 border md:border-2 rounded-md border-accent-2 hover:border-light-steel-blue">
                 <input 
@@ -71,9 +72,9 @@ export default function Subscribe() {
             ) : form.state === 'success' ? (
                 <SuccessMessage>{form.message}</SuccessMessage>
             ) : (
-                <p className="flex flex-row text-sm px-1 md:px-2 py-2">
+                <p className="flex flex-row text-sm px-0 md:px-2 py-2">
                     <b className="min-w-max pr-2">Fun fact:</b> 
-                    <p className="max-w-prose">Entering your email will also give you access to <UnderlinedLink href="/profile" text="top secret pages" /> about me I don't really want 99% of the internet reading.</p>
+                    <p className="max-w-prose">{funFact}</p>
                 </p>
             )}
         </form>
