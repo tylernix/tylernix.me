@@ -21,11 +21,13 @@ export default async function login(req, res) {
           }
       }).then(response => {
           console.log(response.data);
+          return res.status(200).end();
       }).catch(error => {
           console.log(error);
+          return res.status(500).end();
       });
 
-      return res.status(200).end();
+      
     }
 
     // Get id_token from Auth0 using issued code
