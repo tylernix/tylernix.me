@@ -53,7 +53,7 @@ export default function Subscribe({funFactText}) {
     return (
         <form onSubmit={handleSubmit} className="pb-4">
             <h4 className="text-sm md:text-base lg:text-xl text-prussian-blue md:max-w-3xl mb-4">
-                I semi-frequently write about frontend web dev + auth + app security, so if you are a nerd like me and find things interesting, we should become friends.
+                I semi-frequently write about frontend web dev + auth + app security, so if you are a nerd like me and find these things interesting, we should become friends.
             </h4>
             <div className="flex flex-row bg-white p-1 md:p-2 border md:border-2 rounded-md border-accent-2 hover:border-light-steel-blue">
                 <input 

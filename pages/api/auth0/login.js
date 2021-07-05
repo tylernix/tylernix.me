@@ -38,7 +38,7 @@ export default async function login(req, res) {
           client_secret: process.env.AUTH0_CLIENT_SECRET,
           code: req.query.code,
           scope: 'openid profile email',
-          redirect_uri: 'http://localhost:3000/api/auth0/login',
+          redirect_uri: process.env.AUTH0_BASE_URL + '/api/auth0/login',
           state: 'random-state'
       }).then(async response => {
           console.log(response.data);
