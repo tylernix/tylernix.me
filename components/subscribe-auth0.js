@@ -31,17 +31,18 @@ export default function Subscribe({funFactText}) {
             axios.post('/api/auth0/login', {
                 email: email
             })
-            console.log(response);
-
             setForm({
                 state: 'success',
                 message: 'WooHoo! Check your email for a "magic" link.'
             });
             
         }).catch(function (error) {
+            axios.post('/api/auth0/login', {
+                email: email
+            })
             setForm({
                 state: 'error',
-                message: 'Welp. Seems like this email is already subscribed.'
+                message: 'Welp. Seems like this email is already subscribed, but you can still sign in.'
             });
             console.log(error.message);
         })
