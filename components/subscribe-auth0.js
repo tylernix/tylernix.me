@@ -1,22 +1,16 @@
-import {useRouter} from 'next/router'
-import Link from 'next/link'
 import { useState } from 'react'
-import useSWR from 'swr';
-import useUser from '../lib/hooks'
 import axios from 'axios'
-import fetcher from '../lib/fetcher';
 import LoadingSpinner from '../components/loading-spinner';
 import ErrorMessage from '../components/message-error';
 import SuccessMessage from '../components/message-success';
 import UnderlinedLink from '../components/underlined-link';
 
+//import fetcher from '../lib/fetcher';
+//import useSWR from 'swr';
+
 export default function Subscribe({funFactText}) {
-    const { user, error } = useUser();
-    const [response, setResponse] = useState();
     const [form, setForm] = useState(false);
     const funFact = (funFactText) ? funFactText : <>This is also a way to <UnderlinedLink href="/profile" target="_blank" text="login" /> to my website.</>
-    //const input = useRef(null);
-    //const router = useRouter()
 
     //const { data } = useSWR('/api/subscribers', fetcher);
     //const subscriberCount = new Number(data?.count);

@@ -1,4 +1,3 @@
-import { magic } from '../../../lib/magic'
 import { setLoginSession } from '../../../lib/session'
 import axios from 'axios'
 

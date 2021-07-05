@@ -1,4 +1,3 @@
-import { magic } from '../../../lib/magic'
 import { removeTokenCookie } from '../../../lib/auth-cookies'
 import { getLoginSession } from '../../../lib/session'
 
