@@ -8,7 +8,7 @@ export default async function login(req, res) {
     
     // Send magic link email to user after email signup
     if (req.method == 'POST') {
-      const url = process.env.AUTH0_ISSUER_BASE_URL + "/passwordless/start"
+      const url = process.env.AUTH0_ISSUER_BASE_URL + "/passwordless/start";
       axios.post(url, {
           client_id: process.env.AUTH0_CLIENT_ID,
           client_secret: process.env.AUTH0_CLIENT_SECRET,
