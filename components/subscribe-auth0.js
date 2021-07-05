@@ -39,13 +39,13 @@ export default function Subscribe({funFactText}) {
 
             setForm({
                 state: 'success',
-                message: 'WooHoo! This will be fun. Check your email for a magic link.'
+                message: 'WooHoo! Check your email for a "magic" link.'
             });
             
         }).catch(function (error) {
             setForm({
                 state: 'error',
-                message: 'Oops. Seems like this email is already subscribed...or I severely messed something up. 😬'
+                message: 'Welp. Seems like this email is already subscribed.'
             });
         })
     }
