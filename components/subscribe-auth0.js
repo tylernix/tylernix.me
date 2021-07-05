@@ -1,23 +1,18 @@
-import {useRouter} from 'next/router'
-import Link from 'next/link'
 import { useState } from 'react'
-import useSWR from 'swr';
-import useUser from '../lib/hooks'
 import axios from 'axios'
-import fetcher from '../lib/fetcher';
 import LoadingSpinner from '../components/loading-spinner';
 import ErrorMessage from '../components/message-error';
 import SuccessMessage from '../components/message-success';
-import UnderlinedLink from './underlined-link';
+import UnderlinedLink from '../components/underlined-link';
+
+//import fetcher from '../lib/fetcher';
+//import useSWR from 'swr';
 
 export default function Subscribe({funFactText}) {
-    const { user, error } = useUser();
-    const [response, setResponse] = useState();
     const [form, setForm] = useState(false);
     const funFact = (funFactText) ? funFactText : <>This is also a way to <UnderlinedLink href="/profile" target="_blank" text="login" /> to my website.</>
-    //const input = useRef(null);
-    //const router = useRouter()
 
+    console.log("testing");
     //const { data } = useSWR('/api/subscribers', fetcher);
     //const subscriberCount = new Number(data?.count);
 
@@ -30,12 +25,13 @@ export default function Subscribe({funFactText}) {
     
         // Subscribe user to newsletter
         axios.post('/api/email/signup', {
-            emailAddress: email
+            email: email
         }).then(function(response) {            
             // Send a passwordless authentication link to subscribed email
             axios.post('/api/auth0/login', {
                 email: email
             })
+            console.log(response);
 
             setForm({
                 state: 'success',
@@ -47,6 +43,7 @@ export default function Subscribe({funFactText}) {
                 state: 'error',
                 message: 'Welp. Seems like this email is already subscribed.'
             });
+            console.log(error.message);
         })
     }
   

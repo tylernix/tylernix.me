@@ -1,4 +1,3 @@
-import { magic } from '../../../lib/magic'
 import { setLoginSession } from '../../../lib/session'
 import axios from 'axios'
 
@@ -8,7 +7,7 @@ export default async function login(req, res) {
     
     // Send magic link email to user after email signup
     if (req.method == 'POST') {
-      const url = process.env.AUTH0_ISSUER_BASE_URL + "/passwordless/start"
+      const url = process.env.AUTH0_ISSUER_BASE_URL + "/passwordless/start";
       axios.post(url, {
           client_id: process.env.AUTH0_CLIENT_ID,
           client_secret: process.env.AUTH0_CLIENT_SECRET,
@@ -22,11 +21,13 @@ export default async function login(req, res) {
           }
       }).then(response => {
           console.log(response.data);
+          return res.status(200).end();
       }).catch(error => {
           console.log(error);
+          return res.status(500).end();
       });
 
-      return res.status(200).end();
+      
     }
 
     // Get id_token from Auth0 using issued code

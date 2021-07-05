@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { useState } from 'react';
 import Container from "../components/container";
 
 export default function Header() {
   
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <Container>
