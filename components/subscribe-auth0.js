@@ -12,6 +12,7 @@ export default function Subscribe({funFactText}) {
     const [form, setForm] = useState(false);
     const funFact = (funFactText) ? funFactText : <>This is also a way to <UnderlinedLink href="/profile" target="_blank" text="login" /> to my website.</>
 
+    console.log("testing");
     //const { data } = useSWR('/api/subscribers', fetcher);
     //const subscriberCount = new Number(data?.count);
 
@@ -43,6 +44,7 @@ export default function Subscribe({funFactText}) {
                 state: 'error',
                 message: 'Welp. Seems like this email is already subscribed, but you can still sign in.'
             });
+            console.log(error.message);
         })
     }
   

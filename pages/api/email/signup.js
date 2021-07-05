@@ -21,6 +21,7 @@ export default async function Signup(req, res) {
               method: 'POST'
             }
         );
+        console.log(response);
         if (response.status >= 400) {
             const text = await response.text();
       
