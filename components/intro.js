@@ -1,8 +1,8 @@
 import { CMS_NAME } from "../lib/constants";
 import Container from "../components/container";
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL, EMAIL_URL } from "../lib/constants";
-import EmailSignupAuth0 from "./subscribe-auth0";
-import UnderlinedLink from "./underlined-link";
+import EmailSignupAuth0 from "../components/subscribe-auth0";
+import UnderlinedLink from "../components/underlined-link";
 
 export default function Intro() {
   return (

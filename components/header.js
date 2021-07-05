@@ -1,11 +1,10 @@
 import Link from "next/link";
+import { useState } from 'react';
 import Container from "../components/container";
-import MagicLogin from "./email-signup-magic";
-import Auth0Login from "./email-signup-auth0";
 
 export default function Header() {
   
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <Container>

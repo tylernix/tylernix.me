@@ -8,7 +8,7 @@ import fetcher from '../lib/fetcher';
 import LoadingSpinner from '../components/loading-spinner';
 import ErrorMessage from '../components/message-error';
 import SuccessMessage from '../components/message-success';
-import UnderlinedLink from './underlined-link';
+import UnderlinedLink from '../components/underlined-link';
 
 export default function Subscribe({funFactText}) {
     const { user, error } = useUser();
