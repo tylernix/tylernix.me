@@ -1,10 +1,10 @@
 import Link from "next/link";
+import { useState } from 'react';
 import Container from "../components/container";
-
 
 export default function Header() {
   
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <Container>
@@ -22,7 +22,7 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
                 {/* <!-- Heroicon name: outline/menu --> */}
                 <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
             </div>
@@ -33,7 +33,7 @@ export default function Header() {
               <a href="/about" className="text-base mx-4 hover:underline">
                 About
               </a>
-              <a href="/blog" className="ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base text-white bg-imperial-red hover:bg-prussian-blue">
+              <a href="/blog" className="ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md text-base text-white bg-imperial-red hover:bg-prussian-blue">
                 Blog
               </a>
             </div>
@@ -62,7 +62,7 @@ export default function Header() {
                     <span className="sr-only">Close menu</span>
                     {/* <!-- Heroicon name: outline/x --> */}
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
@@ -71,7 +71,7 @@ export default function Header() {
                 <nav className="grid gap-y-8">
                   <a href="/" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                     <svg className="flex-shrink-0 h-6 w-6 text-prussian-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                     <span className="ml-3 text-base text-prussian-blue">
                       Home
@@ -80,7 +80,7 @@ export default function Header() {
 
                   <a href="/about" className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
                     <svg className="flex-shrink-0 h-6 w-6 text-prussian-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="ml-3 text-base text-prussian-blue">
                       About

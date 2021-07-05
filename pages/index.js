@@ -1,5 +1,6 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
+import MoreStoriesCompact from '../components/more-stories-compact'
 import Intro from '../components/intro'
 import WebAuthn from '../components/webauthn'
 import Layout from '../components/layout'

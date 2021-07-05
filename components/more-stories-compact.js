@@ -10,6 +10,7 @@ export default function MoreStoriesCompact({ posts }) {
             <PostPreviewCompact
               key={post.slug}
               title={post.title}
+              date={post.date}
               slug={post.slug}
               excerpt={post.excerpt}
             />
