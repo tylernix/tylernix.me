@@ -44,7 +44,7 @@ export default async function login(req, res) {
           console.log(response.data);
           // Should probably do some jwt validation here, but I don't have any data to hide for now, so...tomorrow
           await setLoginSession(res, response.data)
-          res.writeHead(302, { Location: '/profile' })
+          res.writeHead(302, { Location: '/session' })
           return res.status(200).end();
       }).catch(error => {
           console.log(error);
