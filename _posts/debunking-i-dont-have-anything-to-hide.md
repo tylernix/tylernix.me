@@ -49,7 +49,7 @@ But I’ll share my top five:
 1. [Firefox](https://www.mozilla.org/en-US/firefox/) serves as a good alternative for my web browser.
 2. I have lately been impressed with the search engine results from [DuckDuckGo](https://duckduckgo.com/).
 3. I’ve made the switch from Gmail to [ProtonMail](https://protonmail.com/) as my email provider, and I am so glad I did.
-4. When on public WiFi, a VPN like [ExpressVPN](https://www.expressvpn.com/) is a good choice to keep your personal information more private and secure.
+4. When on public WiFi, a VPN like ExpressVPN or ProtonVPN is a good choice to keep your personal information more private and secure.
 5. A solid password manager like [1Password](https://1password.com/) is a must these days for generating new random passwords when signing up for online services.
 
 I feel like this [tweet](https://twitter.com/tommorris/status/1360193333419773952) from Tom Morris sums this article up pretty well.
