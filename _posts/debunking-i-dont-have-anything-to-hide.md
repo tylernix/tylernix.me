@@ -56,5 +56,5 @@ I feel like this [tweet](https://twitter.com/tommorris/status/136019333341977395
 
 > If any person behaved like an app—rifled through your address book, fitted a tracking device to your car, obsessively logged what books and TV shows you watched, and wanted to disturb you at any moment of the day or night—you’d throw them out of your house and call the police. — Tom Morris (@tommorris)
 
-What do you think? Send me an [email](mailto:tylernix@pm.me). 
+What do you think? Send me an [email](mailto:hey@tylernix.me). 
  
