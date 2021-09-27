@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
+import EMAIL_URL from '../lib/constants'
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0]
@@ -32,7 +33,7 @@ export default function Index({ allPosts }) {
                         <li><a href="/posts/using-webauthn-to-secure-your-digital-life">Using WebAuthn to secure your digital life</a></li>
                         <li><a href="/posts/space-ascii-art">Space ASCII art</a></li>
                     </ul>
-                    <p>If you'd like to get in touch with me, <a href="mailto:tylernix@pm.me" target="_blank">email</a> and maybe <a href="https://twitter.com/tnix" target="_blank">twitter</a> are your best channels. Just know that I have turned notifications off for both, so my response may not be instantaneous (<a href="/posts/how-solve-your-email-inbox">which is actually a good thing for both of us</a>).</p>
+                    <p>If you'd like to get in touch with me, <a href={EMAIL_URL} target="_blank">email</a> and maybe <a href="https://twitter.com/tnix" target="_blank">twitter</a> are your best channels. Just know that I have turned notifications off for both, so my response may not be instantaneous (<a href="/posts/how-solve-your-email-inbox">which is actually a good thing for both of us</a>).</p>
                 </div>
             </div>
         
