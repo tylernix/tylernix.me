@@ -9,13 +9,13 @@ export default function PostPreviewCompact({
 }) {
   return (
     <li className="mb-8">
-      <h3 className="text-lg md:text-xl mb-0 leading-snug">
+      <h3 className="font-electronix text-2xl md:text-3xl mb-0 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="text-imperial-red hover:underline">{title}</a>
         </Link>
       </h3>
-      <p className="text-sm leading-relaxed  truncate">{excerpt}</p>
-      <div className="text-sm text-gray-400 leading-relaxed ">
+      <p className="text-md leading-relaxed truncate">{excerpt}</p>
+      <div className="text-md text-gray-400 leading-relaxed ">
         <DateFormatter dateString={date} displayDistance="true" />
       </div>
       

@@ -17,10 +17,10 @@ export default function Index({ allPosts }) {
         <Head>
           <title>Tyler Nix</title>
         </Head>
-          <Header />
-          <Intro />
-          <WebAuthn />
-          <Container>
+        <Header />
+        <Intro />
+        <WebAuthn />
+        <Container>
           <MoreStories posts={recentPosts} />
         </Container>
       </Layout>

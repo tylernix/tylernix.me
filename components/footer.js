@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-light-steel-blue-light bg-opacity-90 border-t border-accent-2">
       <Container>
         <div className="py-10 flex flex-col ">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-left mb-8 lg:mb-10 lg:pr-4 lg:w-1/2">
+          <h3 className="font-electronix text-4xl lg:text-6xl text-left mb-3 lg:pr-4 lg:w-1/2">
             Thanks for your time.
           </h3>
           <div className="flex flex-col space-y-2.5 text-left border-l-2 border-prussian-blue pl-4">

@@ -1,6 +1,10 @@
 module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
+    fontFamily: {
+      'electronix': ['Electronix', 'ui-sans-serif', 'system-ui'],
+      'virgil': ['Virgil', 'ui-sans-serif', 'system-ui']
+    },
     extend: {
       colors: {
         'imperial-red': '#E63946',

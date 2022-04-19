@@ -10,11 +10,12 @@ export default function Header() {
     <Container>
       <div className="relative bg-white">
         <div className="mx-auto">
-          <div className="flex justify-between items-center border-gray-100 py-8 md:py-12 md:justify-start md:space-x-10">
+          <div className="flex justify-between items-center border-gray-100 pt-8 md:pt-12 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="/">
-                <span className="sr-only">tnix</span>
-                <img className="h-10 w-auto sm:h-12" src="/assets/tnix-logo.png" alt="tnix logo"></img>
+              <a href="/" className="font-electronix text-5xl md:text-7xl">
+                tnix
+                {/* <span className="sr-only">tnix</span> */}
+                {/* <img className="h-10 w-auto sm:h-12" src="/assets/tnix-logo.png" alt="tnix logo"></img> */}
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
@@ -54,8 +55,9 @@ export default function Header() {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div>
-                <img className="h-10 w-auto sm:h-12" src="/assets/tnix-logo.png" alt="tnix logo"></img>
+                <div className="font-electronix text-5xl md:text-7xl">
+                  tnix
+                  {/* <img className="h-10 w-auto sm:h-12" src="/assets/tnix-logo.png" alt="tnix logo"></img> */}
                 </div>
                 <div className="-mr-2">
                   <button type="button" onClick={() => setNavbarOpen(!navbarOpen)} className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

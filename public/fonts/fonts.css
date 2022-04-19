@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Electronix';
+    src: url('Electronix-Regular.woff2') format('woff2'), url('Electronix-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Virgil';
+    src: url('Virgil.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
