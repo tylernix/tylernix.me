@@ -17,7 +17,7 @@ export default function Intro() {
           </div>
           <div className="flex flex-col pl-8 md:pl-10 lg:pl-28 pr-0 md:pr-4 pt-0 md:pt-2 pb-1 md:pb-4 lg:pb-0 space-y-2 md:space-y-4 md:max-w-3xl">
             <h1 className="font-electronix md:flex text-3xl md:text-5xl lg:text-6xl text-prussian-blue">
-              Hi, I'm Tyler<span className="text-5xl lg:text-8xl text-imperial-red" >.</span>
+              Hi, I'm Tyler<span className="text-5xl lg:text-7xl text-imperial-red" >.</span>
             </h1>
             <p className="font-electronix text-lg md:text-xl lg:text-2xl text-prussian-blue ">
               Welcome to my very own piece of the internet. My coding playground. My <UnderlinedLink href="/blog" text="written curiosities" />. My digial identity (even my own handwriting). 
