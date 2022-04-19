@@ -12,12 +12,12 @@ export default function Intro() {
           <div className="hidden lg:flex">
             <img className="w-full items-end" src="assets/profile.png" />
           </div>
-          <div className="flex lg:hidden min-w-max mt-2 md:ml-4">
-            <img className="border border-cool-steel-blue rounded-full w-10 h-10 md:w-20 md:h-20" src="assets/profile-circle.png" />
+          <div className="flex lg:hidden min-w-max mt-2 ml-4 md:ml-4">
+            <img className="border border-cool-steel-blue rounded-full w-14 h-14 md:w-24 md:h-24" src="assets/profile-circle.png" />
           </div>
-          <div className="flex flex-col pl-8 md:pl-16 lg:pl-28 pr-0 md:pr-4 pt-0 md:pt-2 pb-1 md:pb-4 lg:pb-0 space-y-2 md:space-y-4 md:max-w-3xl">
-            <h1 className="font-electronix md:flex text-4xl md:text-6xl lg:text-7xl text-prussian-blue">
-              Hi, I'm Tyler<span className="text-7xl lg:text-8xl text-imperial-red" >.</span>
+          <div className="flex flex-col pl-8 md:pl-10 lg:pl-28 pr-0 md:pr-4 pt-0 md:pt-2 pb-1 md:pb-4 lg:pb-0 space-y-2 md:space-y-4 md:max-w-3xl">
+            <h1 className="font-electronix md:flex text-3xl md:text-5xl lg:text-6xl text-prussian-blue">
+              Hi, I'm Tyler<span className="text-5xl lg:text-8xl text-imperial-red" >.</span>
             </h1>
             <p className="font-electronix text-lg md:text-xl lg:text-2xl text-prussian-blue ">
               Welcome to my very own piece of the internet. My coding playground. My <UnderlinedLink href="/blog" text="written curiosities" />. My digial identity (even my own handwriting). 
@@ -39,7 +39,7 @@ export default function Intro() {
             {/* <div className="hidden md:block lg:pb-4">
               <EmailSignupAuth0 />
             </div> */}
-            <div className="absolute top-28 left-0 md:top-24 lg:relative lg:top-0 lg:left-0 lg:pb-2 flex flex-row items-center space-x-1 pt-4">
+            <div className="absolute top-16 left-0 md:top-28 md:left-2 lg:relative lg:top-0 lg:left-0 lg:pb-2 flex flex-row items-center space-x-1 pt-4">
                 <div className="hidden lg:flex text-sm md:text-base text-gray-400 pr-2">Find me: </div>
                 <a href={`${LINKEDIN_URL}`} target="_blank" className="" rel="me">
                   <svg className="h-6 w-6 md:h-8 md:w-8 text-prussian-blue hover:text-imperial-red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
