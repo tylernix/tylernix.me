@@ -31,7 +31,7 @@ I, however, adapted his workflow and made it simpler.
 
 ## How to modify your keyboard to improve efficiency
 
-Unfortunately, you need an Apple Mac computer for this to work because this setup uses two tools that are Mac specific.
+Before getting started, you will need a Mac computer for this to work because this setup uses two tools that are Mac specific.
 
 [Karabiner-Elements](https://karabiner-elements.pqrs.org/) is a “powerful and stable keyboard customizer for macOS.” You can set up simple keyboard modification from a Graphical User Interface (GUI), or you can can create complex keyboard modifications using JSON.
 
@@ -39,7 +39,7 @@ The only problem with Karabiner is that they format can be quite verbose. That i
 
 [Goku](https://github.com/yqrashawn/GokuRakuJoudo) (technically GokuRakuJoudo) is “a tool that lets you manage your Karabiner configuration with ease.”
 
-It basically turns this JSON
+Instead of writing this JSON
 
 ```json
 {
@@ -70,41 +70,41 @@ It basically turns this JSON
 }
 ```
 
-into this
+you write this
 
 ```edn
 {:des "caps_lock" :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
 ```
 
-then multiply those lines saved by 100s of keys + commands.
+saving yourself nundreds of lines of code. 
 
 ## Getting started
 
 1. Install [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
 
-- Karabiner is an application you install on your computer.
-- During setup, only enable Karabiner on an external keyboard. That way, if you mess up your keyboard really bad after accidentally saving your karabiner.json file, you can use your internal mac keypad to fix it (or type your password in if you happen to lock yourself out and your keyboard isn’t working). I learned this the hard way. Thank goodness for TouchID!!
+    - Karabiner is an application you install on your computer.
+    - During setup, only enable Karabiner on an external keyboard. That way, if you mess up your keyboard really bad after accidentally saving your karabiner.json file, you can use your internal mac keypad to fix it (or type your password in if you happen to lock yourself out and your keyboard isn’t working). I learned this the hard way. Thank goodness for TouchID!!
 
 2. Install [Goku](https://github.com/yqrashawn/GokuRakuJoudo).
 
-- Goku can be installed via [brew](https://brew.sh/).
-- `> brew install yqrashawn/goku/goku`
+    - Goku can be installed via [brew](https://brew.sh/).
+    - `brew install yqrashawn/goku/goku`
 
 3. Using your terminal, navigate to `~/.config/`  and create a `karabiner.edn` file inside the folder.
 
-- `> cd ~/.config/`
-- `> touch karabiner.edn`
+    - `cd ~/.config/`
+    - `touch karabiner.edn`
 
 4. If you have VS Code installed, open the folder in a new window using.
 
-- `> code ~/.config/ -r`
+    - `code ~/.config/ -r`
 
 5. Copy my starter karabiner.edn file from [https://github.com/tylernix/dotfiles/blob/main/karabiner/karabiner.edn](https://github.com/tylernix/dotfiles/blob/main/karabiner/karabiner.edn) and replace in your karabiner.edn file.
 
-6. After saving the file, run `> goku` in your terminal.
+6. After saving the file, run `goku` in your terminal.
 
-- After setting up Karabiner, you may need to rename `profiles.name`  inside `~/.config/karabiner/karabiner.json` from “Default profile” to “Default” for Goku to work.
-- Note: Continue to run `> goku` in your terminal every time you make a change. I prefer this over `> gokuw` because if you mess up your keyboard keys and accidentally CTRL+S (save), it can be hard to type what you need in order to fix your keyboard. Speaking again from experience. :wink:
+    - After setting up Karabiner, you may need to rename `profiles.name`  inside `~/.config/karabiner/karabiner.json` from “Default profile” to “Default” for Goku to work.
+    - Note: Continue to run `goku` in your terminal every time you make a change. I prefer this over `gokuw` because if you mess up your keyboard keys and accidentally CTRL+S (save), it can be hard to type what you need in order to fix your keyboard. Speaking again from experience. :wink:
 
 7. Give it a try! See the instructions below on which keys to use. The world is now at your fingertips.
 
@@ -122,43 +122,43 @@ There are three types of modes:
 
 Movement mode starts by **holding** the `f` key with your left hand and using your right hand to navigate by **tapping** `j,i,k,l` (instead of using your arrow keys). For example, to move left, hold `f` while tapping `j`. To move right, hold `f` while tapping `i`. It takes some practice, but as you get faster, it gets easier.
 
-Navigate up/down/left/right
+**Navigate up/down/left/right**
 
 - up: `f+i`
 - down: `f+k`
 - left: `f+j`
 - right: `f+l`
 
-Navigate left/right word-by-word
+**Navigate left/right word-by-word**
 
 - left: `f+h`
 - right: `f+;`
 
-Navigate to front/end of the line
+**Navigate to front/end of the line**
 
 - front: `f+u`
 - end: `f+o`
 
 ### Delete mode
 
-Delete mode is the same as moving, but...well deleting in that direction. Instead of holding the f key, you will hold the d key. I use this mode the most to quickly fix my typo errors while typing.
+Delete mode is the same as moving, but...well...deleting in that direction. Instead of holding the `f` key, you will hold the `d` key. I use this mode the most to quickly fix my typo errors while typing.
 
-Delete character left/right
+**Delete character left/right**
 
 - left: `d+j`
 - right: `d+k`
 
-Delete word left/right
+**Delete word left/right**
 
 - left: `d+h`
 - right: `d+l`
 
-Delete line before/behind
+**Delete line before/behind**
 
 - before: `d+u`
 - after: `d+o`
 
-Undo (i.e. CTRL+Z)
+**Undo (i.e. CTRL+Z)**
 
 - undo: `d+spacebar`
 
@@ -166,14 +166,14 @@ Undo (i.e. CTRL+Z)
 
 Select mode is helpful the most when coding. Selecting to the front or end of a line or selecting whole lines by moving up or down saves so many manual mouse highlights. Just use movement-mode to get to the spot you need, then use select-mode to highlight.
 
-Select up/down/left/right
+**Select up/down/left/right**
 
 - up: `s+i`
 - down: `s+k`
 - left: `s+j`
 - right: `s+l`
 
-Select to front/end of line
+**Select to front/end of line**
 
 - front: `s+u`
 - end: `s+o`

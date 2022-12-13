@@ -35,6 +35,18 @@ module.exports = {
               backgroundColor: theme('colors.light-steel-blue.highlight'),
               color: theme('colors.prussian-blue'),
               padding: '3px'
+            },
+            'code::before': {
+              content: '""'
+            },
+            'code::after': {
+              content: '""'
+            },
+            code: {
+              backgroundColor: theme('colors.light-steel-blue.light'),
+              color: theme('colors.imperial-red'),
+              borderRadius: '0.3em',
+              padding: '4px 5px 6px',
             }
           }
         }
