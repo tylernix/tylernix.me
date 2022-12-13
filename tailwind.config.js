@@ -29,7 +29,12 @@ module.exports = {
               fontWeight: '400',
               color: theme('colors.prussian-blue'),
               borderBottomWidth: '2px',
-              borderColor: theme('colors.imperial-red')
+              borderColor: theme('colors.imperial-red'),
+              whiteSpace: 'pre-wrap',       /* CSS3 */
+              whiteSpace: '-moz-pre-wrap',  /* Mozilla, since 1999 */
+              whiteSpace: '-pre-wrap',      /* Opera 4-6 */
+              whiteSpace: '-o-pre-wrap',    /* Opera 7 */
+              wordWrap: 'break-word'        /* Internet Explorer 5.5+ */
             },
             mark: {
               backgroundColor: theme('colors.light-steel-blue.highlight'),
