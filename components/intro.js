@@ -20,7 +20,7 @@ export default function Intro() {
               Hi, I'm Tyler<span className="text-5xl lg:text-7xl text-imperial-red" >.</span>
             </h1>
             <p className="font-electronix text-lg md:text-xl lg:text-2xl text-prussian-blue ">
-              Welcome to my very own piece of the internet. My coding playground. My <UnderlinedLink href="/blog" text="written curiosities" />. My digial identity (even my own handwriting). 
+              Welcome to my very own piece of the internet. My coding playground. My <UnderlinedLink href="/blog" text="written curiosities" />. My digital identity (even my own handwriting). 
             </p>  
             <p className="font-electronix text-lg md:text-xl lg:text-2xl text-prussian-blue">
               A while back, I stumbled upon a quote by <UnderlinedLink href="https://www.desiringgod.org/articles/10-resolutions-for-mental-health" target="_blank" text="Dr. Clyde Kilby" /> which says, "I shall not fall into the falsehood that this day, or any day, is merely another ambiguous and plodding twenty-four hours, but rather a unique event, filled, if I so wish, with worthy potentialities."
