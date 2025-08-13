@@ -44,7 +44,7 @@ export default function WebAuthn() {
     } else {
          demo = <div className="flex flex-col p-6 md:p-8 lg:p-6 lg:w-1/3 border bg-prussian-blue text-white"> 
                     <h1 className="text-xl lg:text-3xl pb-4 lg:pb-6 text-white">This text is jumbled on purpose.</h1>
-                    <p className="pb-2 text-white">In order to demonstrate a new authentication protocal called <a className="text-light-steel-blue" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>, I created a simple demo.</p>
+                    <p className="pb-2 text-white">In order to demonstrate a new authentication protocol called <a className="text-light-steel-blue" href="https://auth0.com/blog/introduction-to-web-authentication/" target="_blank">WebAuthn</a>, I created a simple demo.</p>
                     <p className="pb-6 text-white">To unlock the text, connect a <a className="text-light-steel-blue" href="https://www.nytimes.com/wirecutter/reviews/best-security-keys/" target="_blank">USB authenticator</a>, or make sure your device has a built in one like <a className="text-light-steel-blue" href="https://support.apple.com/en-us/HT208108" target="_blank">Face ID</a>, and enter a username or email address below.</p> 
                     <form className="flex flex-col relative">
                         <svg className="h-6 w-6 top-2 left-2 text-imperial-red absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
