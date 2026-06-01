@@ -5,7 +5,7 @@ coverImage: '/assets/blog/using-webauthn-to-secure-your-digital-life/webauthn-co
 date: '2021-01-05T05:35:07.322Z'
 author:
   name: Tyler Nix
-  picture: '/assets/blog/authors/tyler.jpeg'
+  picture: '/assets/profile-circle-2025.png'
 ogImage:
   url: '/assets/blog/using-webauthn-to-secure-your-digital-life/webauthn-cover.png'
 ---

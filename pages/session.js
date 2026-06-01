@@ -1,5 +1,4 @@
 import React from 'react';
-//import { useUser } from '@auth0/nextjs-auth0';
 import Container from '../components/container'
 import Layout from '../components/layout'
 import Header from '../components/header'

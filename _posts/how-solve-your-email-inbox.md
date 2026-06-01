@@ -5,7 +5,7 @@ coverImage: '/assets/blog/how-to-solve-your-email-inbox/cover.jpg'
 date: '2021-02-13T05:35:07.322Z'
 author:
   name: Tyler Nix
-  picture: '/assets/blog/authors/tyler.jpeg'
+  picture: '/assets/profile-circle-2025.png'
 ogImage:
   url: '/assets/blog/how-to-solve-your-email-inbox/cover.jpg'
 ---
