@@ -10,8 +10,8 @@ export default function PostPreviewCompact({
   return (
     <li className="mb-8">
       <h3 className="font-electronix text-2xl md:text-3xl mb-0 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="text-imperial-red hover:underline">{title}</a>
+        <Link href={`/posts/${slug}`} className="text-imperial-red hover:underline">
+          {title}
         </Link>
       </h3>
       <p className="text-md leading-relaxed truncate">{excerpt}</p>
