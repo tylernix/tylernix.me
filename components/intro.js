@@ -10,10 +10,10 @@ export default function Intro() {
       <Container>
         <div className="relative flex md:flex-row py-4 md:p-0 md:pt-4 items-start lg:items-end text-left ">
           <div className="hidden lg:flex">
-            <img className="w-full items-end" src="assets/profile.png" />
+            <img className="w-full items-end" src="assets/profile-2025.png" />
           </div>
           <div className="flex lg:hidden min-w-max mt-2 ml-4 md:ml-4">
-            <img className="border border-cool-steel-blue rounded-full w-14 h-14 md:w-24 md:h-24" src="assets/profile-circle.png" />
+            <img className="border border-cool-steel-blue rounded-full w-14 h-14 md:w-24 md:h-24" src="assets/profile-circle-2025.png" />
           </div>
           <div className="flex flex-col pl-8 md:pl-10 lg:pl-28 pr-0 md:pr-4 pt-0 md:pt-2 pb-1 md:pb-4 lg:pb-0 space-y-2 md:space-y-4 md:max-w-3xl">
             <h1 className="font-electronix md:flex text-3xl md:text-5xl lg:text-6xl text-prussian-blue">

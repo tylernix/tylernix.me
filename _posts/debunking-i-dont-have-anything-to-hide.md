@@ -5,7 +5,7 @@ coverImage: '/assets/blog/debunking-i-dont-have-anything-to-hide/cover.jpg'
 date: '2021-05-04T05:35:07.322Z'
 author:
   name: Tyler Nix
-  picture: '/assets/blog/authors/tyler.jpeg'
+  picture: '/assets/profile-circle-2025.png'
 ogImage:
   url: '/assets/blog/debunking-i-dont-have-anything-to-hide/cover.jpg'
 ---

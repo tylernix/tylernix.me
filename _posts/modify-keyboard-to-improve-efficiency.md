@@ -5,7 +5,7 @@ coverImage: '/assets/blog/modify-keyboard-to-improve-efficiency/cover.jpg'
 date: '2022-12-12T05:35:07.322Z'
 author:
   name: Tyler Nix
-  picture: '/assets/blog/authors/tyler.jpeg'
+  picture: '/assets/profile-circle-2025.png'
 ogImage:
   url: '/assets/blog/modify-keyboard-to-improve-efficiency/cover.jpg'
 ---
