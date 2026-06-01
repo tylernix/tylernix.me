@@ -2,7 +2,7 @@
 
 My personal website that I designed using [Figma](https://figma.com), built using [Next.js](https://nextjs.org), and host using [Vercel](https://vercel.com).
 
-![demo](/public/assets/preview-03-01-21.png)
+![site preview](https://tylernix.me/api/og)
 
 
 ## Visit
@@ -36,7 +36,7 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 This blog-starter uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v1.4 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
 
 # License
-I am providing the code and resources in this repository to you under an open source license. Because this is my personal repository, the license you receive to my code and resources is from me and not my employer (Auth0).
+I am providing the code and resources in this repository to you under an open source license. Because this is my personal repository, the license you receive to my code and resources is from me and not my employer.
 
 Copyright 2021 Tyler Nix
 
