@@ -4,21 +4,7 @@ module.exports = {
     //
     // basePath: '/app',
   
-    async redirects() {
-      return [
-        {
-          source: '/auth0',
-          destination: '/api/auth/login',
-          permanent: false,
-        },
-        {
-          source: '/logout',
-          destination: '/api/auth/logout',
-          permanent: false,
-        }
-      ]
-    },
-    async headers() {
+async headers() {
       return [
         {
           source: "/fonts/Electronix-Regular.woff2",

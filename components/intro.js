@@ -1,7 +1,5 @@
-import { CMS_NAME } from "../lib/constants";
 import Container from "../components/container";
 import { GITHUB_URL, LINKEDIN_URL, TWITTER_URL, EMAIL_URL } from "../lib/constants";
-import EmailSignupAuth0 from "../components/subscribe-auth0";
 import UnderlinedLink from "../components/underlined-link";
 
 export default function Intro() {
@@ -36,9 +34,6 @@ export default function Intro() {
               <UnderlinedLink href="https://auth0.com" target="_blank" text="Auth0" />
               who discovered websites become even more magical when you give humans a way to securely login.
             </p>                */}
-            {/* <div className="hidden md:block lg:pb-4">
-              <EmailSignupAuth0 />
-            </div> */}
             <div className="absolute top-16 left-0 md:top-28 md:left-2 lg:relative lg:top-0 lg:left-0 lg:pb-2 flex flex-row items-center space-x-1 pt-4">
                 <div className="hidden lg:flex text-sm md:text-base text-gray-400 pr-2">Find me: </div>
                 <a href={`${LINKEDIN_URL}`} target="_blank" className="" rel="me">
@@ -60,9 +55,6 @@ export default function Intro() {
           </div>
           
         </div>
-        {/* <div className="sm:relative md:hidden">
-            <EmailSignupAuth0 />
-        </div> */}
       </Container>
     </section>
   );

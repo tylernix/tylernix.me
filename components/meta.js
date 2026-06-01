@@ -33,7 +33,7 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`Tyler Nix is a Senior Solutions Engineer at Auth0 with experience in Web Development and Cloud Computing who specializes in Identity and Application Security.`}
+        content={`Tyler's professional experience spans roles across engineering, architecture, sales, and product at companies ranging from small Series B startups to large Fortune 5 enterprises. He now uses that diverse experience to build better products at Okta.`}
       />
       <meta property="og:image" content="/assets/og-image.png" />
       <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
