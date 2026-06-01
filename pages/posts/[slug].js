@@ -26,9 +26,9 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article className="mb-32">
               <Head>
-                <title>
-                  {post.title}
-                </title>
+                <title>{post.title}</title>
+                <meta name="description" content={post.excerpt} />
+                <meta property="og:description" content={post.excerpt} />
                 <meta property="og:image" content={`/api/og?title=${encodeURIComponent(post.title)}&excerpt=${encodeURIComponent(post.excerpt)}`} />
               </Head>
               <PostHeader
