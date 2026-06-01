@@ -57,19 +57,19 @@ export default async function handler(req) {
       <div style={{ display: 'flex', width: '100%', height: '100%', backgroundColor: '#F7F8FD', alignItems: 'center', justifyContent: 'center', fontFamily: 'Electronix' }}>
         <div style={{ position: 'absolute', left: 0, top: 0, width: '12px', height: '100%', backgroundColor: '#E63946' }} />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '60px', padding: '0 80px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '80px', padding: '0 100px' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={profileImageSrc} width={220} height={220} style={{ borderRadius: '50%', border: '4px solid #B0C1E8' }} alt="Tyler Nix" />
+          <img src={profileImageSrc} width={340} height={340} style={{ borderRadius: '50%', border: '6px solid #B0C1E8' }} alt="Tyler Nix" />
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', fontSize: 80, color: '#1D3557', lineHeight: 1 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', fontSize: 120, color: '#1D3557', lineHeight: 1 }}>
               <span>Tyler Nix</span>
               <span style={{ color: '#E63946' }}>.</span>
             </div>
-            <div style={{ display: 'flex', fontSize: 30, color: '#457B9D', maxWidth: '600px', lineHeight: 1.4 }}>
+            <div style={{ display: 'flex', fontSize: 40, color: '#457B9D', maxWidth: '560px', lineHeight: 1.4 }}>
               My growing digital garden on identity, security, and the general web.
             </div>
-            <div style={{ display: 'flex', fontSize: 24, color: '#B0C1E8', marginTop: '8px' }}>
+            <div style={{ display: 'flex', fontSize: 32, color: '#B0C1E8', marginTop: '4px' }}>
               tylernix.me
             </div>
           </div>
