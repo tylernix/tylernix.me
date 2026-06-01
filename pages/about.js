@@ -21,7 +21,8 @@ export default function Index({ allPosts }) {
             <div className="max-w-2xl mx-auto my-12">
                 <PageTitle>About</PageTitle>
                 <div className="prose lg:prose-xl">
-                    <p>My favorite quote is <blockquote>“A lot of what people call intelligence boils down to curiosity.” - Aaron Swartz</blockquote></p>
+                    <p>My favorite quote is:</p>
+                    <blockquote>”A lot of what people call intelligence boils down to curiosity.” - Aaron Swartz</blockquote>
                     <p>The one word that I hope comes to mind when someone thinks of me is <b>dependable</b>. Aaaaand if I had to choose the second best word to describe me, it would be <b>curious</b> because it most accurately represents how I try to approach each day in a rapidly advancing world: a passion for absorbing varying information and communicating its proper value. </p>
                     <p><mark>I believe intelligence, if not fed, withers over time, but curiosity can nourish intelligence for a lifetime.</mark> That is why I try to treat this personal website kind of like a <a href="https://joelhooks.com/digital-garden" target="_blank" rel="noopener noreferrer">digital garden</a> my recent curiosities.</p>
                     <p>A garden is a beautiful metaphor for curious minds. Gardens take time to be fruitful. They take work. They require <a href="https://www.biblegateway.com/passage/?search=1+Corinthians+3%3A7&version=ESV" target="_blank" rel="noopener noreferrer">trust in factors that are out of your control</a>. Not everything planted will grow; yet some will flourish. And when they do, the harvest is oh-so satisfying.</p>
